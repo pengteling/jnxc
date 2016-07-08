@@ -1,9 +1,11 @@
 //cnpm install webpack webpack-dev-server --save
 //cnpm install css-loader style-loader file-loader extract-text-webpack-plugin raw-loader --save-dev
 //cnpm install node-sass sass-loader less-loader autoprefixer-loader --save-dev
+//npm install html-webpack-plugin --save-dev
 var path = require("path");
 var webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     resolve: {
         alias: {
@@ -73,7 +75,8 @@ module.exports = {
             allChunks: true
         }),
         new HtmlWebpackPlugin({ // Also generate a test.html
-            filename: 'test.html'
+            filename: 'test.html',
+            template: 'index.html'
         }),
         //jquery插件 
         new webpack.ProvidePlugin({
