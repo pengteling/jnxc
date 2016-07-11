@@ -8,7 +8,25 @@ $purple:#7a4ffd;
 body{	
 	font-family: "Arial","Microsoft YaHei", "SimHei", "SimSun";		
 }
-.dd{
-	display:flex;
-	font-size:12px;
+
+
+.section {
+  text-align:center;
+  font-size: 3em;
+}
+.content{
+  margin:50px
+}
+.content3{
+  margin:1450px
+}
+#menu{
+	position: fixed;
+	z-index:999;
+}
+#footer{
+	position:fixed;
+	z-index:999;
+	bottom: 0;
+
 }
