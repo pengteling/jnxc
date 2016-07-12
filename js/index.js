@@ -39,6 +39,14 @@ require("./fullpage/jquery.fullpage.js");
 
 require("./../sass/style.scss");
 
+
+require("./movingboxes/movingboxes.css");
+
+require("./movingboxes/jquery.movingboxes.js");
+
+require("./movingboxes/slider.js");
+
+
 $(document).ready(function() {
     $('#fullpage').fullpage({
         lockAnchors: false, // true 锁定网址 不显示后面的 #page1 
@@ -119,22 +127,4 @@ $(document).ready(function() {
 // })
 
 
-require("./movingboxes/movingboxes.css");
-require("./movingboxes/jquery.movingboxes.min.js");
 
-$(function() {
-
-$('.scrollContainer').movingBoxes({
-    /* width and panelWidth options deprecated, but still work to keep the plugin backwards compatible*/
-    width: 1000,
-    panelWidth: 0.3,
-    reducedSize: 0.8,
-    startPanel: 1, // start with this panel
-    wrap: false, // if true, the panel will "wrap" (it really rewinds/fast forwards) at the ends
-    buildNav: false, // if true, navigation links will be added
-    navFormatter: function() {
-        return "&#9679;";
-    } // function which returns the navigation text for each panel
-});
-
-});
