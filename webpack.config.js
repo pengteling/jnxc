@@ -9,15 +9,15 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     resolve: {
         alias: {
-            "jquery": path.resolve(
-                __dirname,
-                "bower_components/jquery/dist/jquery"
-            )
-        // ,
-        // "flexslider": path.resolve(
-        //     __dirname,
-        //     'bower_components/flexslider/jquery.flexslider-min'
-        // )
+            // "jquery": path.resolve(
+            //     __dirname,
+            //     "bower_components/jquery/dist/jquery"
+            // )
+            // ,
+            // "flexslider": path.resolve(
+            //     __dirname,
+            //     'bower_components/flexslider/jquery.flexslider-min'
+            // )
         }
     },
     entry:
@@ -63,6 +63,11 @@ module.exports = {
             {
                 test: /\.html$/,
                 loader: "raw-loader" // loaders: ['raw-loader'] is also perfectly acceptable.
+            },
+
+            {
+                test: require.resolve("jquery"),
+                loader: "expose?$!expose?jQuery"
             }
 
         ]
@@ -79,16 +84,20 @@ module.exports = {
             template: 'index.html'
         }),
         //jquery插件 
-        new webpack.ProvidePlugin({
-            "jQuery": path.resolve(
-                __dirname,
-                "bower_components/jquery/dist/jquery"
-            ),
-            "$": path.resolve(
-                __dirname,
-                "bower_components/jquery/dist/jquery"
-            )
-        }),
+        // new webpack.ProvidePlugin({
+        //     // "jQuery": path.resolve(
+        //     //     __dirname,
+        //     //     "bower_components/jquery/dist/jquery"
+        //     // ),
+        //     // "$": path.resolve(
+        //     //     __dirname,
+        //     //     "bower_components/jquery/dist/jquery"
+        //     // )
+
+        //     $: "jquery",
+        //     jQuery: "jquery",
+        //     "window.jQuery": "jquery"
+        // }),
         //hot
         new webpack.HotModuleReplacementPlugin()
         ,

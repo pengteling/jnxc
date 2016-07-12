@@ -6,19 +6,31 @@ if (process.env.NODE_ENV !== 'production') { //开发环境下 raw-loader  html�
 
 //require("./pJqueryAppearAnimateCSS3/jac.js"); //动画
 // require("./rotate3d/do.js");
-//require("./superslide/jquery.SuperSlide.2.1.1.js");
+//require("imports?$=jquery!./superslide/jquery.SuperSlide.2.1.1.js");
 //require("./superslide/TouchSlide.1.1.js");
 //require("./../css/style.css");
 //require("./../sass/style.scss");
 //require("./../sass/style.less");
 
 
+//require('imports?$=jquery!./waypoints/jquery.waypoints.min.js');
+
+require("jquery");
+require("./pJqueryAppearAnimateCSS3/jac.js"); //动画
+
 //require('./waypoints/jquery.waypoints.min.js');
 
 
 //fullpage 加载列表
 require("./fullpage/jquery.fullpage.css");
+
 require("script!./fullpage/vendors/scrolloverflow.min.js"); //使用script-loader，它可以在全局环境下执行一次指定的脚本 在node.js环境下，script-loader什么都不做。
+//require("imports?$=jquery!./fullpage/vendors/scrolloverflow.min.js");
+// require("imports?$=jquery,jQuery=jquery!./fullpage/vendors/jquery.easings.min.js");
+// require("imports?$=jquery,jQuery=jquery!./fullpage/jquery.fullpage.js");
+
+
+//require("./fullpage/vendors/scrolloverflow.min.js");
 require("./fullpage/vendors/jquery.easings.min.js");
 require("./fullpage/jquery.fullpage.js");
 
@@ -58,16 +70,21 @@ $(document).ready(function() {
         //         $.fn.fullpage.moveTo(1);
         //     }
         // }
-
+        afterLoad: function(anchorLink, index) {
+            if (index == 3) {
+                //alert(index);
+                $(".content").animateCss("fadeInUp"); //滚动过程 使用animate.css 动画 也可以自定义Css3动画
+            }
+        },
 
         //Scrolling
-        css3: true,
+        css3: false,
         scrollingSpeed: 700,
         autoScrolling: true,
         fitToSection: true,
         fitToSectionDelay: 1000,
         scrollBar: false,
-        easing: 'ease-in-out',
+        easing: 'easeInOutExpo',
         easingcss3: 'ease-in-out',
 
 
@@ -89,15 +106,35 @@ $(document).ready(function() {
     $("#scrollup").on("click", function() {
         //$.fn.fullpage.moveSectionUp();
         $.fn.fullpage.moveTo(3);
-    })
+    });
 });
 
 
 
 // $(function() {
 // var waypoints = $('#handler-first').waypoint(function(direction) {
+//     alert(direction);
 //     console.log(this.element.id + ' hit 25% from top of window')
-// }, {
-//     offset: '25%'
 // });
 // })
+
+
+require("./movingboxes/movingboxes.css");
+require("./movingboxes/jquery.movingboxes.min.js");
+
+$(function() {
+
+$('.scrollContainer').movingBoxes({
+    /* width and panelWidth options deprecated, but still work to keep the plugin backwards compatible*/
+    width: 1000,
+    panelWidth: 0.3,
+    reducedSize: 0.8,
+    startPanel: 1, // start with this panel
+    wrap: false, // if true, the panel will "wrap" (it really rewinds/fast forwards) at the ends
+    buildNav: false, // if true, navigation links will be added
+    navFormatter: function() {
+        return "&#9679;";
+    } // function which returns the navigation text for each panel
+});
+
+});

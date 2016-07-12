@@ -1,0 +1,15 @@
+{
+  "name": "MovingBoxes",
+  "homepage": "https://github.com/CSS-Tricks/MovingBoxes",
+  "version": "2.3.4",
+  "_release": "2.3.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.3.4",
+    "commit": "1b26eab956dfb394e833cf916063c9ca2e1002b6"
+  },
+  "_source": "https://github.com/CSS-Tricks/MovingBoxes.git",
+  "_target": "~2.3.4",
+  "_originalSource": "https://github.com/CSS-Tricks/MovingBoxes.git",
+  "_direct": true
+}
