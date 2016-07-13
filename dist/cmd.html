@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="/bower_components/jquery/dist/jquery.js"></script>
+</head>
+<body>
+<script>
+var lian ={};
+lian.piaobing =function(num){
+    console.log(num + "piao");
+};
+lian.buping = function(num){
+    console.log(num+"ren");
+};
+lian.lianzhang=function(mingling){
+    lian[mingling.type](mingling.num);
+};
+
+lian.lianzhang({
+    type:"piaobing",
+    num:100
+});
+lian.lianzhang({
+    type:"buping",
+    num:100
+});
+</script>
+	
+</body>
+</html>
