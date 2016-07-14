@@ -127,4 +127,48 @@ $(document).ready(function() {
 // })
 
 
+//固定头部 导航 插件
+// require("./tmstickup/tmstickup.js");
+// $(function() {
+// $("#menu").TMStickUp({});
+// });
 
+
+require("./tweenmax/tweenmax.min.js");
+// $(function() {
+// TweenMax.from($('.section2'), 0.25, {
+//     delay: 1,
+//     css: {
+//         left: '-100%',
+//         immediateRender: true
+//     },
+//     ease: Expo.easeOut
+// })
+// })
+
+
+require("./superScrollorama/jquery.superScrollorama.js");
+
+$(document).ready(function() {
+
+    // TweenMax.to($('.section2'), 1, {
+    //     delay: 2,
+    //     css: {
+    //         opacity: 0
+    //     }
+    // });
+
+    var controller = $.superscrollorama({ //平时滚动条才触发 fullpage不触发
+        isVertical: true,
+        triggerAtCenter: false,
+        playoutAnimations: true,
+        reverse: true
+    });
+    controller.addTween('.section2',
+        TweenMax.to($('.section2'), 1, {
+            delay: 0,
+            css: {
+                opacity: 0
+            }
+        }));
+});
