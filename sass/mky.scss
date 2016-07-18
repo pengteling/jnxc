@@ -1,0 +1,122 @@
+@charset 'utf-8';
+/*  gem install compass-normalize  */
+@import "normalize","mixin","comm";
+@include normalize();
+
+
+
+.head{
+	height: 81px;
+	background: #3f4055;
+	position: relative;
+	overflow: hidden;
+	.logo{
+		float: left;
+		i{
+			background: url(../images/logo.png);
+			width:64px;
+			height: 64px;
+			display: inline-block;
+			float: left;
+			margin-top: 8px;
+		}
+		span{
+			font-size:24px;
+			color: #f4f3ef;
+			line-height: 80px;		
+			@extend .yahei;	
+		}
+
+	}
+	.guan{
+
+		width:750px;
+		height: 81px;
+		background: url(../images/guan.png);
+		position: absolute;
+		z-index: 1;
+		right:0;
+		top: 0;
+		opacity: 0;
+	}
+	
+	.layer1{
+		width:236px;
+		height: 236px;
+		background: url(../images/layer1.png);
+		position: absolute;
+		z-index: 2;
+		right:215px;		
+	}
+	.layer2{
+		width:236px;
+		height: 236px;
+		background: url(../images/layer2.png);
+		position: absolute;
+		z-index: 2;
+		right:0px;		
+	}
+}
+.main{
+	width:100%;
+	height: calc(100vh - 81px);
+	background: url(../images/mainbg.jpg) left bottom no-repeat;
+	background-size: cover;
+}
+
+.container {
+	position:absolute;
+	z-index:99;    
+    height: 81px;
+    width: 750px;
+    right:0;
+    top: 0;
+    position: absolute;
+    overflow: hidden;
+    perspective: 500px;
+}
+
+.scrollTxt {
+    position: absolute;    
+    bottom: 0px;
+    right: 0px;
+    animation-name: scroll;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    
+}
+.scrollTxt p {
+    color: #5bc6a5;
+    opacity: 0.3;
+    @extend .yahei;	
+    font-size: 20px;
+    text-transform: uppercase;
+    
+    text-align: center;
+    letter-spacing: 5px;
+}
+@keyframes scroll {
+    from {
+        transform: rotateX(8deg) rotateZ(9deg);
+    }
+    to {
+        transform: rotateX(8deg) rotateZ(9deg) translateY(61vw);
+    }
+}
+
+
+ .masked {
+        background-image: -webkit-linear-gradient(left, #147B96, #E6D205 25%, #147B96 50%, #E6D205 75%, #147B96);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-background-size: 200% 100%;
+        -webkit-animation: masked-animation 4s infinite linear;
+    }
+
+
+@keyframes masked-animation {
+    0%  { background-position: 0 0;}
+    100% { background-position: -100% 0;}
+}
