@@ -1,4 +1,4 @@
-/*if (process.env.NODE_ENV !== 'production') { //开发环境下 raw-loader  html文件 动态加载
+if (process.env.NODE_ENV !== 'production') { //开发环境下 raw-loader  html文件 动态加载
     require('./../index.html');
     require("./../sass/style.scss");
 }
@@ -81,7 +81,7 @@ $(document).ready(function() {
         afterLoad: function(anchorLink, index) {
             if (index == 3) {
                 //alert(index);
-                $(".content").animateCss("fadeInUp"); //滚动过程 使用animate.css 动画 也可以自定义Css3动画
+                //$(".content").animateCss("fadeInUp"); //滚动过程 使用animate.css 动画 也可以自定义Css3动画
             }
         },
 
@@ -99,7 +99,7 @@ $(document).ready(function() {
         scrollOverflow: true,
         scrollOverflowOptions: {
             mouseWheel: true,
-            scrollbars: false,
+            scrollbars: true,
             startX: 0,
             startY: 0
 
@@ -119,12 +119,12 @@ $(document).ready(function() {
 
 
 
-// $(function() {
-// var waypoints = $('#handler-first').waypoint(function(direction) {
-//     alert(direction);
-//     console.log(this.element.id + ' hit 25% from top of window')
-// });
-// })
+$(function() {
+var waypoints = $('#handler-first').waypoint(function(direction) {
+    alert(direction);
+    console.log(this.element.id + ' hit 25% from top of window')
+});
+})
 
 
 //固定头部 导航 插件
@@ -170,6 +170,13 @@ $(document).ready(function() {
             css: {
                 opacity: 0
             }
-        }));
+        }))
+        .addTween('.section3',
+            TweenMax.to($('.section3 .content'), 1, {
+                delay: 0,
+                css: {
+                    opacity: 0
+                }
+            }))
+    ;
 });
-*/
