@@ -7,6 +7,7 @@
 	<script src="/bower_components/jquery/dist/jquery.min.js"></script>	
 	<script src="/js/tweenmax/tweenmax.min.js"></script>
 	<!-- <script src='/js/tweenmax/SplitText.min.js'></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/TextPlugin.min.js"></script>
 	<script src="http://johnpolacek.github.io/superscrollorama/js/jquery.lettering-0.6.1.min.js"></script>
 
 	<style>
@@ -87,6 +88,7 @@ width: 100%;
 	</style>
 </head>
 <body>
+<div id="text">sbs bs sbsbs bsbs sbsb sbsbsb</div>
 	<div id="featureAnimation">
 		<div id="featureBackground" style="pointer-events:none;"></div>
 		<div id="whyGSAP">为什么&nbsp;月读视界</div>
@@ -108,6 +110,7 @@ width: 100%;
 
 <script>
 $(function(){
+	TweenLite.to("#text", 2, {text:"This is the new text", ease:Linear.easeNone});
 	var master = new TimelineMax({delay:1.2,repeat:-1});
 	var bg = $("#featureBackground"),
     centerY = $("#featureAnimation").height() / 2,
