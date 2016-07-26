@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>立体线框球形旋转</title>
+	<style>
+		body{
+			background: #000;
+		}
+		.ball-box{
+			width:300px;
+			height: 300px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -150px;
+			margin-top: -150px;
+			perspective:3000px;
+			perspective-origin:50% 50%;
+			transform: rotateZ(-30deg) ;
+		}
+		.ball{
+			height: 100%;
+			transform-style:preserve-3d;	
+			 /* transform: rotateZ(-30deg)  rotateY(0deg);	  */	
+backface-visibility:hidden;
+			animation: roll3d 5s infinite linear;
+			/* transform-origin: 50% 50%; */
+		}
+		.ball-box::after{
+			content: "";
+			width:1px;
+			height: 500px;
+			position: absolute;
+			background-color: #ff0;
+			left: 0;
+			top: 0;
+			transform: translateX(150px) translateY(-100px);
+		}
+		.ball > div{
+			border:1px #fff solid;
+			position: absolute;
+			border-radius: 50%;
+			width:100%;
+			height: 100%;
+
+		}
+		.line-1{
+			transform: rotateY(0deg);
+		}
+		.line-2{
+			transform: rotateY(36deg);
+		}
+		.line-3{
+			transform: rotateY(72deg);
+		}
+		.line-4{
+			transform: rotateY(108deg);
+		}
+		.line-5{
+			transform: rotateY(144deg);
+		}
+		@keyframes roll3d{
+			0{
+				transform:rotateY(0deg);
+			}
+			100%{
+				transform:rotateY(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+
+<div class="ball-box">
+	<div class="ball">
+		<div class="line-1"></div>
+		<div class="line-2"></div>
+		<div class="line-3"></div>
+		<div class="line-4"></div>
+		<div class="line-5"></div>
+	</div>
+</div>
+
+	
+</body>
+</html>
