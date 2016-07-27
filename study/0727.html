@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<style>
+	div{
+		margin: 100px auto;
+	}
+	#circle{
+		width:120px;
+		height: 120px;
+		border-radius: 50%;
+		background: #7fee1d;
+	}
+</style>
+<div id="circle"></div>
+
+
+<style>
+	#oval{
+		width:200px;
+		height: 100px;
+		/* border-radius: 50% / 50%; */
+		/* border-radius: 100px / 50px; */
+		border-radius: 100px 100px 100px 100px/ 50px 50px 50px 50px;
+		background: #7fee1d;
+	}
+</style>
+<div id="oval"></div>
+
+
+<style>
+	#triangle{
+		width:0;
+		height: 0;
+		border-style: solid;
+		border-color: #fcf921 transparent transparent;
+		border-width: 140px 70px 00px 70px;
+	}
+</style>
+<div id="triangle"></div>
+
+
+<style>
+	#triangle1{
+		width:0;
+		height: 0;
+		border-style: solid;
+		border-color:  transparent #fcf921 transparent  transparent;
+		border-width: 70px 140px 70px 0px;
+	}
+</style>
+<div id="triangle1"></div>
+
+<style>
+	#triangle2{
+		width:0;
+		height: 0;
+		border-style: solid;
+		border-color:  transparent transparent  transparent #fcf921 ;
+		border-width: 70px 0 70px 140px;
+	}
+</style>
+<div id="triangle2"></div>
+
+
+<style>
+	#triangle3{
+		width:0;
+		height: 0;
+		border-style: solid;
+		border-color:  transparent transparent #fcf921 transparent  ;
+		border-width: 0 70px 140px 70px ;
+	}
+</style>
+<div id="triangle3"></div>
+
+<style>
+	#diamond {
+		width:120px;
+		height: 120px;
+		background: #0f0;
+		transform: rotateZ(45deg);
+		transform-origin:50% 100%;
+	}
+</style>
+<div id="diamond">
+	
+</div>
+
+
+<style>
+	#diamond2 {
+		width:0;
+		height: 0;
+		border-style: solid;
+		border-color:  transparent transparent #fcf921 transparent  ;
+		border-width: 0 70px 140px 70px ;
+		position: relative;
+
+
+		
+	}
+	#diamond2::after{
+		position: absolute;
+		content: "";
+		width:0;
+		height: 0;
+		border-style: solid;
+		border-color: #fcf921 transparent transparent;
+		border-width: 140px 70px 00px 70px;
+		/* left: -70px;
+		top: 140px; */
+	}
+</style>
+<div id="diamond2">
+	
+</div>
+
+<style>
+	#trapezium {
+    height: 0;
+    width: 120px;
+    border-bottom: 120px solid #ec3504;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+}                    
+</style>
+<div id="trapezium"></div>
+
+
+<style>
+	#parallelogram{
+		width: 160px;
+		height: 100px;
+		background: #8734f7;
+		transform: skew(30deg,10deg);
+		transition:  all 0.5s;
+	}
+</style>
+	<div id="parallelogram"></div>
+
+<style>
+	#star {
+    width: 0;
+    height: 0;   
+    color: #fc2e5a;
+    position: relative;
+    display: block;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid #fc2e5a;
+    border-left: 100px solid transparent;
+    -moz-transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+}
+  
+#star:before {
+    height: 0;
+    width: 0;
+    position: absolute;
+    display: block;
+    top: -45px;
+    left: -65px;
+    border-bottom: 80px solid #fc2e5a;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    content: '';
+    -webkit-transform: rotate(-35deg);
+    -moz-transform: rotate(-35deg);
+    -ms-transform: rotate(-35deg);
+    -o-transform: rotate(-35deg);
+}
+  
+#star:after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    display: block;
+    top: 3px;
+    left: -105px;
+    color: #fc2e5a;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid #fc2e5a;
+    border-left: 100px solid transparent;
+    -webkit-transform: rotate(-70deg);
+    -moz-transform: rotate(-70deg);
+    -ms-transform: rotate(-70deg);
+    -o-transform: rotate(-70deg);
+}     
+</style>
+<div id="star"></div>
+
+
+<style>
+	#heart {
+    position: relative;
+}
+  
+#heart:before,#heart:after {
+    content: "";
+    width: 70px;
+    height: 115px;
+    position: absolute;
+    background: red;
+    left: 70px;
+    top: 0;
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+  
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}                              
+</style>
+<div id="heart"></div>
+
+<style>
+	#pacman {
+    width: 0;
+    height: 0;
+    border-right: 70px solid transparent;
+    border-top: 70px solid #ffde00;
+    border-left: 70px solid #ffde00;
+    border-bottom: 70px solid #ffde00;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+}                
+</style>
+<div id="pacman"></div>
+
+<style>
+	#infinity {
+    width: 220px;
+    height: 100px;
+    position: relative;
+}
+  
+#infinity:before,#infinity:after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 20px solid #06c999;
+    -moz-border-radius: 50px 50px 0;
+    border-radius: 50px 50px 0 50px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+  
+#infinity:after {
+    left: auto;
+    right: 0;
+    -moz-border-radius: 50px 50px 50px 0;
+    border-radius: 50px 50px 50px 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}                          
+</style>
+<div id="infinity"></div>
+</body>
+</html>
