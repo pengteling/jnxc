@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度地图API 全国网点查询</title>
+    <link rel="stylesheet" href="dist/css/bmap.css">
+</head>
+<body>
+   
+    
+    <div class="dealer-area">
+	<div class="provinces">
+		<div class="select dropdown-toggle col-md-24 col-sm-24 col-xs-24"
+			data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<span style="color: #626262" data-province="">请选择省</span>
+		</div>
+		<!--<span class="caret"></span>-->
+		<ul class="dropdown-menu">
+		</ul>
+	</div>
+	<div class="cities">
+		<div class="select dropdown-toggle col-md-24 col-sm-24 col-xs-24"
+			data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<span style="color: #626262" data-city="">请选择市</span>
+		</div>
+		<!--<span class="caret"></span>-->
+		<ul class="dropdown-menu">
+		</ul>
+	</div>
+
+	<div class="search-parent">
+		<span class="place-holder" data-placeholder-for=".search-dealer">请输入关键字</span>
+		<input type="text" class="dealername search-dealer">
+	</div>
+
+	<div id="dealer-search" class="btn btn-reverse-2nd">搜索</div>
+</div>
+<hr noshade color="#0066cc" style="display: none">
+
+<div id="dealer-wrap">
+	<!--<div class="up-arrow"></div>-->
+	<!--<div id="dealer-list">-->
+	<ul id="dealer-item">
+
+	</ul>
+	<!--</div>-->
+	<!--<div class="down-arrow"></div>-->
+</div>
+<div id="dealer-map"></div>
+
+
+    <script src="http://localhost:8080/webpack-dev-server.js"></script>
+    <script src="dist/js/commons.js"></script>
+    <script src="dist/js/bmap.js"></script>
+</body>
+</html>
