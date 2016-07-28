@@ -17,4 +17,4 @@ var allCities = Location.getCities(23);
 
 var allDistrict = Location.getDistrict(268);
 
-console.log(allDistrict);
+//console.log(allDistrict);

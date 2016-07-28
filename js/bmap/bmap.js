@@ -38,23 +38,44 @@ return area.data.reduce(function(r, v) {
 
 
 
-exports.getDistrict = function(pid) {
+exports.getDistrict = function(cid) {
 //console.log(area);
-return area.data.reduce(function(r1, v1) {
+// return area.data.reduce(function(r1, v1) {
 
-    v1.al.reduce(function(r2, v2) {
-        //console.log(r2);
-        r2[v2.areaid] = v2.al.reduce(function(r3, v3) {
-            r3.push({
-                id: v3['areaid'] + "",
-                text: v3['areaname']
-            });
-            return r3;
-        }, []);
+//      v1.al.reduce(function(r2, v2) {
+        
+//          r2[v2.areaid] = v2.al.reduce(function(r3, v3) {
+//             r3.push({
+//                 id: v3['areaid'] + "",
+//                 text: v3['areaname']
+//             });
+//             return r3;
+//         }, []);
 
-    }, []);
+//     }, []);
 
 
-}, []);
+// }, []);
+
+
+return area.data.reduce( function(result, value){               
+            value['al'].reduce(function(r, v){
+                result[v.areaid] = v['al'].reduce( function(r1, v1){
+                    r1.push({id:v1['areaid']+"", text:v1['areaname']});
+                    result[v1['areaid']] = {id:v1['areaid']+"", text:v1['areaname']};
+                    return r1;
+                },[]);
+            },result);
+            return result;
+        },{})[cid];
 
 }
+
+
+
+// var temp = area.data.reduce( function(result, value){ 
+
+//     result[value.areaid] = value.al;
+//     return result;
+// },{});
+// console.log(temp);
