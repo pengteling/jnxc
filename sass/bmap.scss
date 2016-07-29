@@ -2,3 +2,73 @@
 /*  gem install compass-normalize  */
 @import "normalize","mixin","comm";
 @include normalize();
+
+.select {
+    display: block;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 10px;
+    padding-right: 40px;
+    background: #fff url("http://mall.changan.com.cn/ca-web/rock/img/icon-arrow/arrow-down.png?ver=20160701015225") 93%
+ center no-repeat;
+    background-size: 12px 12px;
+    border: 1px solid #e0e0e0;
+    height: 32px;
+    font-size: 14px;
+    line-height: 0.4;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+}
+
+.dealer-area .provinces {
+    width: 150px;
+    margin-right: 5px;
+    float: left;
+    position: relative;
+}
+.dealer-area .cities {
+    width: 150px;
+    margin-right: 5px;
+    float: left;
+    position: relative;
+}
+.dealer-area .search-parent {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+#dealer-search {
+    height: 32px;
+    padding-top: 9px;
+}
+.btn-reverse-2nd {
+    background-color: #03a9f4;
+}
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+#dealer-map {
+    z-index: -1;
+    width: 100%;
+    height: 596px;
+    margin: auto;
+    margin-bottom: 150px;
+}
+
+#dealer-wrap {
+    position: absolute;
+    top: 42px;
+    right: 30px;
+    width: 270px;
+    height: 480px;
+    padding-top: 20px;
+    background-color: white;
+    opacity: 0.92;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 9999;
+}

@@ -35,7 +35,8 @@ module.exports = {
         //publicPath: './../', //发布时
         filename: './js/[name].js'
     },
-    // devtool: "#inline-source-map",
+
+    devtool: "source-map",
     module: {
         loaders: [
             {
@@ -46,14 +47,14 @@ module.exports = {
             , {
                 test: /\.less$/,
                 //loader: "style!css!less"
-                loader: ExtractTextPlugin.extract('', 'css-loader!autoprefixer-loader?{browsers:["last 2 version", "> 1%"]}!less')
+                loader: ExtractTextPlugin.extract('', 'css-loader!autoprefixer-loader?{browsers:["last 2 version", "> 1%"]}!less?sourceMap')
             }
 
             , {
                 test: /\.scss$/,
                 //loader: "style!css!less"
                 //loader: ExtractTextPlugin.extract('', 'css-loader!autoprefixer-loader?{browsers:["last 2 version", "> 1%"]}!sass')
-                loader: ExtractTextPlugin.extract('', 'css-loader!autoprefixer-loader?{browsers:["last 2 version", "> 1%"]}!sass') //调试时图片
+                loader: ExtractTextPlugin.extract('', 'css-loader!autoprefixer-loader?{browsers:["last 2 version", "> 1%"]}!sass?sourceMap') //调试时图片
 
             //loader:   'css-loader!autoprefixer-loader?{browsers:["last 2 version", "> 1%"],flexbox: "false"}!sass'  //正式
             }
@@ -71,7 +72,19 @@ module.exports = {
                 test: require.resolve("jquery"),
                 loader: "expose?$!expose?jQuery"
             }
-
+        /*,{
+            test: /\.woff/,
+            loader: 'url?prefix=font/&limit=10000&mimetype=application/font-woff'
+        }, {
+            test: /\.ttf/,
+            loader: 'file?prefix=font/'
+        }, {
+            test: /\.eot/,
+            loader: 'file?prefix=font/'
+        }, {
+            test: /\.svg/,
+            loader: 'file?prefix=font/'
+        }*/
         ]
     },
     plugins: [
