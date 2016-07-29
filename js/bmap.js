@@ -72,8 +72,12 @@ $(".provinces ul").on("click", "li", function(e) {
 
 
     map.clearOverlays(); //清空地图上的点
-    $("#dealer-item").html("");
+    $("#dealer-item").html(""); //清空列表
 
+    if (data.length <= 0) { //无数据的情况
+        $("#dealer-item").append($('<p style="font-size: 18px;color: #a6a6a6;margin-top:20px;">' +
+            '该地区暂无经销商</p></div>'));
+    }
     data.forEach(function(e) {
 
         console.log(e.name);
@@ -125,7 +129,7 @@ $(".cities").on("click", "li", function(e) {
 });
 
 
-$(".provinces ul li [data-id=23]").parent().click();
+//$(".provinces ul li [data-id=23]").parent().click();
 
 });
 
@@ -146,8 +150,36 @@ function initMap() {
         mapTypes: [BMAP_NORMAL_MAP, BMAP_HYBRID_MAP]
     })); //2D图，卫星图
     map.addControl(new BMap.OverviewMapControl());
-    //map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  
-    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
+    //  map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
+    //map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
+
+    var point = new BMap.Point(116.331398, 39.897445);
+    map.centerAndZoom(point, 12);
+
+    // function myFun(result) {
+    //     cityName = result.name; //baidu地图接口得到现在所在市
+    //     alert(cityName);
+    //     map.centerAndZoom(cityName, 12); //地图渲染当前城市
+    // //setLocation(cityName);//调用方法根据市填写省份的名字
+    // }
+
+    // var myCity = new BMap.LocalCity();
+    // myCity.get(myFun);
+
+
+    function myFun(result) {
+        var cityName = result.name;
+        map.setCenter(cityName);
+        //alert("当前定位城市:" + cityName);
+
+        //setLocation(cityName);//调用方法根据市填写省份的名
+
+
+    }
+    var myCity = new BMap.LocalCity();
+    myCity.get(myFun);
+
+
     // 创建地址解析器实例     
     map.enableScrollWheelZoom(); //启动鼠标滚轮
 
@@ -195,3 +227,5 @@ function openInfo(content, e) {
 }
 //  })
 //})  
+
+
