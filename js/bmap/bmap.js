@@ -54,7 +54,7 @@ return area.data.reduce(function(r, v) {
 }
 
 
-
+//根据城市查下属县区
 exports.getDistrict = function(cid) {
 //console.log(area);
 // return area.data.reduce(function(r1, v1) {
@@ -94,6 +94,24 @@ return area.data.reduce(function(result, value) {
 
 }
 
+//根据城市查下属县区
+exports.getDistrict2 = function(cid) {
+return area.data.reduce(function(result, value) {
+
+    value['al'].reduce(function(r, v) {
+
+        result[v.areaid] = v['al'].reduce(function(r1, v1) {
+            r1.push({
+                id: v1['areaid'],
+                txt: v1['areaname']
+            });
+            return r1;
+        }, [])
+        return r;
+    }, []);
+    return result;
+}, [])[cid];
+}
 
 
 // var temp = area.data.reduce( function(result, value){ 
@@ -102,3 +120,19 @@ return area.data.reduce(function(result, value) {
 //     return result;
 // },{});
 // console.log(temp);
+
+//根据某个市 查出 某省+某市  用于定位于某城市后，下拉框自动选择某省 和某市
+exports.getPC = function(city) {
+return area.data.reduce(function(r, v) {
+    v['al'].reduce(function(r1, v1) {
+        r[v1.areaname] = {
+            pid: v1['areaid'],
+            p_txt: v1['areaname'],
+            cid: v['areaid'],
+            c_txt: v['areaname']
+        };
+        return r1;
+    }, []);
+    return r;
+}, [])[city];
+};

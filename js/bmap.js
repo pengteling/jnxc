@@ -17,9 +17,16 @@ var allProvinces = Location.getProvinces();
 //console.log(allCities);
 
 
-//var allDistrict = Location.getDistrict(268);
+var allDistrict2 = Location.getDistrict2(268);
 
-//console.log(allDistrict);
+console.log(allDistrict2);
+
+
+
+// var pclist = Location.getPC("内江市");
+
+// console.log(pclist);
+
 var map;
 
 $(function() {
@@ -138,7 +145,7 @@ $(".cities").on("click", "li", function(e) {
 
 function showcity(cityName) {
     data = Location.getList(cityName);
-    console.log(data);
+    //console.log(data);
 
 
 
@@ -151,7 +158,7 @@ function showcity(cityName) {
     }
     data.forEach(function(e) {
 
-        console.log(e.name);
+        //console.log(e.name);
 
 
 
