@@ -72,3 +72,26 @@ hr {
     overflow-y: auto;
     z-index: 9999;
 }
+
+.dealer-info {
+    padding-bottom: 40px;
+    width: 220px;
+    height: auto;
+    margin-left: 20px;
+}
+.marker {
+    float: left;
+    width: 20px;
+    height: 24px;
+    background: url('../images/marker.png') no-repeat;
+}
+.dealer-content {
+    padding-left: 25px;
+}
+h5.company {
+    line-height: 20px;
+    font-size: 16px;
+}
+.dealer-content p {
+    margin-bottom: 10px;
+}

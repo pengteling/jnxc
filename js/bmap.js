@@ -65,8 +65,79 @@ $(".provinces ul").on("click", "li", function(e) {
     $(".cities").find('span').attr('data-city', cityId);
     map.centerAndZoom(allCities[0].text, 11); //地图展示初始化的市
 
+    showcity(allCities[0].text);
+    // data = Location.getList(allCities[0].text);
+    // console.log(data);
 
-    data = Location.getList(allCities[0].text);
+
+
+    // map.clearOverlays(); //清空地图上的点
+    // $("#dealer-item").html(""); //清空列表
+
+    // if (data.length <= 0) { //无数据的情况
+    //     $("#dealer-item").append($('<p style="font-size: 18px;color: #a6a6a6;margin-top:20px;">' +
+    //         '该地区暂无经销商</p></div>'));
+    // }
+    // data.forEach(function(e) {
+
+    //     console.log(e.name);
+
+
+
+
+    //     point = new BMap.Point(e.wgs[0].lng, e.wgs[0].lat);
+
+
+    //     mk = new BMap.Marker(point, {
+    //         icon: myIcon
+    //     });
+    //     map.addOverlay(mk);
+
+    //     addClickHandler(e.name, mk, point);
+    //     //map.panTo(point);
+
+
+    //     var temphtml = "";
+    //     temphtml += '<li class="dealer-info">';
+    //     temphtml += ' <div class="marker"></div>';
+    //     temphtml += ' <div class="dealer-content">';
+    //     temphtml += '     <h5 class="company" onclick="onMarker($(this))" data-wgs="{&quot;lng&quot;:&quot;105.837694&quot;,&quot;lat&quot;:&quot;30.157718&quot;}">' + e.name + '</h5>';
+    //     temphtml += '    <p class="addrTag">地址：' + e.address + '</p>';
+    //     temphtml += '     <p class="telTag">电话：' + e.tel + '</p>     ';
+
+
+    //     temphtml += ' </div>';
+    //     temphtml += '</li>';
+
+    //     $("#dealer-item").append($(temphtml));
+
+    // });
+
+
+});
+
+$(".cities").on("click", "li", function(e) {
+    var currentTarget = $(e.currentTarget);
+    city = currentTarget.text();
+    cityId = currentTarget.find('a').attr('data-id');
+
+    $(".cities").find('span').text(city); //设置点击省后显示的市
+
+    $(".cities").find('span').attr('data-city', cityId);
+    map.centerAndZoom(city, 11); //地图展示初始化的市
+
+    showcity(city);
+
+});
+
+
+//$(".provinces ul li [data-id=23]").parent().click();
+
+});
+
+
+function showcity(cityName) {
+    data = Location.getList(cityName);
     console.log(data);
 
 
@@ -112,27 +183,9 @@ $(".provinces ul").on("click", "li", function(e) {
         $("#dealer-item").append($(temphtml));
 
     });
-
-
-});
-
-$(".cities").on("click", "li", function(e) {
-    var currentTarget = $(e.currentTarget);
-    city = currentTarget.text();
-    cityId = currentTarget.find('a').attr('data-id');
-
-    $(".cities").find('span').text(city); //设置点击省后显示的市
-
-    $(".cities").find('span').attr('data-city', cityId);
-    map.centerAndZoom(city, 11); //地图展示初始化的市
-
-});
-
-
-//$(".provinces ul li [data-id=23]").parent().click();
-
-});
-
+    var deawrap = document.getElementById("dealer-wrap");
+    map.getContainer().appendChild(deawrap); // 将经销商列表div追加到地图上
+}
 
 function initMap() {
     // myIcon = new BMap.Icon('http://mall.changan.com.cn/ca-web/rock/img/marker.png?ver=20160701015225', new BMap.Size(16, 23), {
@@ -173,6 +226,7 @@ function initMap() {
         //alert("当前定位城市:" + cityName);
 
         //setLocation(cityName);//调用方法根据市填写省份的名
+        showcity(cityName);
 
 
     }
