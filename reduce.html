@@ -7,15 +7,14 @@
 <body>
 
 
-<div class="ptl"></div>
+<div class="ptl" id="ptl">ptl</div>
 <div class="ptl2"></div>
 	<script>
-	function abs(){
-		this.name = "eee";
-		this.fo = function(){
-			console.log("erer");
-		}
-	}
+	Element.prototype.on = Element.prototype.addEventListener;
+	document.querySelector("#ptl").on("click",function(){
+		alert("ptl");
+	})
+
 
 	</script>
 </body>
