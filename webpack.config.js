@@ -24,7 +24,7 @@ module.exports = {
     // ["webpack-dev-server/client?http://localhost:8080/", "webpack/hot/dev-server", './js/index.js']
     {
         //index: ['./js/index.js'],
-        bmap: ['./js/bmap.js']
+        carmel: ['./js/carmel.js']
     // mky: ['./js/mky.js']
     // ,
     // custom: ['./js/custom.js'],
