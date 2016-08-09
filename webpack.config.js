@@ -71,7 +71,12 @@ module.exports = {
             {
                 test: require.resolve("jquery"),
                 loader: "expose?$!expose?jQuery"
+            },
+            {
+                test: /\.svg/,
+                loader: 'svg-url-loader'
             }
+
         /*,{
             test: /\.woff/,
             loader: 'url?prefix=font/&limit=10000&mimetype=application/font-woff'

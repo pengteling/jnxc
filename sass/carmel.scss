@@ -117,14 +117,15 @@ table {
 	background:none repeat scroll 0 0 #eee
 }
 body {
-	font-family:ElenaWebBasicRegular,serif;
+	/* font-family:Verdana, Tahoma,Arial,Helvetica,Verdana,sans-serif,"Times New Roman","Lucida Grande" ; */
+	font-family:sans-serif,"Times New Roman",Arial,Helvetica,Verdana;
 	font-size:117%;
-	color:#444
+	color:#888;
 }
 h1,h2,h3,h4,h5,h6 {
 	margin:.5em 0 .7em;
-	font-family:SeravekLight;
-	letter-spacing:-1px
+	font-family:Arial;
+	letter-spacing:1px
 }
 h1 strong,h2 strong,h3 strong,h4 strong,h5 strong,h6 strong {
 	font-weight:700
@@ -162,16 +163,16 @@ p {
 	word-spacing:.1em
 }
 p strong {
-	font-family:ElenaWebBasicBold,serif
+	
 }
 p a.ext {
-	color:#444
+	color:#888
 }
 p a.ext:active,p a.ext:focus,p a.ext:hover {
-	color:#e0505c
+	color:#0070C0
 }
 p a.ext:active i,p a.ext:focus i,p a.ext:hover i {
-	color:#e0505c
+	color:#0070C0
 }
 p a.ext i {
 	font-size:.65em;
@@ -227,34 +228,34 @@ form ul li {
 }
 a {
 	text-decoration:none;
-	color:#e0505c
+	color:#0070C0
 }
 a:active,a:hover {
 	color:#72dcb5;
 	outline:0
 }
-a.bt {
+input.bt {
 	display:inline-block;
-	color:#e0505c;
+	color:#0070C0;
 	text-decoration:none;
 	padding:0 0 .5em;
-	border-bottom:1px #e0505c solid;
+	border-bottom:1px #0070C0 solid;
 	margin:.5em 0;
-	font-family:SeravekLight;
+	
 	text-transform:uppercase;
 	font-size:1em
 }
-a.bt:active,a.bt:focus,a.bt:hover {
+input.bt:active,a.bt:focus,a.bt:hover {
 	padding:0 .25em .5em
 }
-a.bt.bt-solid {
-	background:#e0505c;
+input.bt.bt-solid {
+	background:#0070C0;
 	color:#fff;
 	border-color:transparent;
 	padding:1em 1.5em;
 	margin:1.5em 0
 }
-a.bt.bt-solid:active,a.bt.bt-solid:focus,a.bt.bt-solid:hover {
+input.bt.bt-solid:active,a.bt.bt-solid:focus,a.bt.bt-solid:hover {
 	padding-left:1.75em;
 	padding-right:1.75em
 }
@@ -298,7 +299,7 @@ blockquote.bq p:after {
 	padding-left:.25em
 }
 .code {
-	font-family:monospace
+	
 }
 @media screen and (max-width:380px) {
 	h1 {
@@ -419,7 +420,7 @@ br.togl {
 }.hero-container {
 	width:100%;
 	display:inline-block;
-	color:#e0505c;
+	color:#888;
 	padding:1.5em 1em
 }
 .hero-container i {
@@ -438,9 +439,9 @@ br.togl {
 	margin-right:auto
 }
 .hero-container.red {
-	background-color:#e0505c;
+	background-color:#72dcb5;
 	color:#fff;
-	background-image:url(../assets/hex-red.svg);
+	background-image:url(../images/hex-red.svg);
 	background-size:cover;
 	background-position:center center
 }
@@ -451,14 +452,14 @@ br.togl {
 .hero-container.light {
 	background-color:#d8f5eb;
 	color:#1f7d5a;
-	color:#444
+	color:#888
 }
 .hero-container.light.wi {
 	background-position:left bottom;
 	margin-top:1em
 }
 .hero-container.wi {
-	background-image:url(https://www.turnyourhead360.nl/assets/hex.svg);
+	background-image:url(../images/hex.svg);
 	background-size:cover;
 	background-position:center center
 }
@@ -562,7 +563,7 @@ br.togl {
 .split-blocks.long h1 span,.split-blocks.long h2 span,.split-blocks.long h3 span {
 	display:block;
 	position:absolute;
-	font-family:SeravekLight;
+	
 	color:#e0505c;
 	font-size:.75em;
 	left:-.5em;
@@ -595,16 +596,16 @@ span.icn i.green {
 	color:#72dcb5
 }
 .contactbox a {
-	color:#444;
+	color:#888;
 	display:inline-block;
-	border-bottom:1px solid #444
+	border-bottom:1px solid #888
 }
 .contactbox a:active,.contactbox a:focus,.contactbox a:hover {
 	color:#e0505c;
 	border-color:#e0505c
 }
 .bl a {
-	color:#444;
+	color:#888;
 	text-align:left;
 	display:inline-block;
 	width:100%;
@@ -1110,7 +1111,7 @@ header h1 a {
 	display:block
 }
 header h1 a:active,header h1 a:hover,header h1 a:link,header h1 a:visited {
-	color:#444
+	color:#888
 }
 header h1 a strong {
 	font-size:1.5em;
@@ -1126,7 +1127,7 @@ header h1 a:hover strong {
 }
 header h1 a span {
 	display:block;
-	font-family:ElenaWebBasicRegular,serif;
+	
 	font-size:.65em;
 	margin-top:.8em;
 	letter-spacing:normal
@@ -1154,7 +1155,7 @@ nav .togl.v-sm {
 	float:right;
 	margin-right:.5em;
 	padding:0;
-	background:transparent url(../assets/tridot.svg) center top;
+	background:transparent url(../images/tridot.svg) center top;
 	border:none;
 	outline:0;
 	-webkit-appearance:none;
@@ -1193,7 +1194,7 @@ nav ul li,nav ul.show li {
 	margin-left:1em
 }
 nav ul li a,nav ul.show li a {
-	color:#444;
+	color:#888;
 	display:inline-block;
 	position:relative;
 	padding:.5em 0;
@@ -1212,7 +1213,7 @@ nav ul li a.active,nav ul li a:active,nav ul li a:focus,nav ul li a:hover,nav ul
 	position:relative;
 	float:left;
 	text-align:left;
-	font-family:SeravekLight;
+	
 	background:#72dcb5;
 	padding:3em 0;
 	margin-top:1.5em
@@ -1260,4 +1261,38 @@ span.logo{
 	height:72px;
 	background:url(../images/logo-1.png) center center no-repeat;
 	background-size:cover;
+}
+
+.frm .label{
+	padding:1em 1%;
+}
+.frm .ipt{
+	
+	padding:1em 1%;
+
+}
+.frm .ipt input.ipt-txt{
+	border-bottom:#ccc 1px solid;
+	width:90%;
+}
+
+.hero-container .hero {
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.25em;
+    max-width: 1020px; 
+
+}
+header h1 a span {
+	margin-top: 0;
+}
+
+@media (max-width: 768px){
+	span.logo {
+    width: 59px;
+    height: 36px;
+	}
+}
+nav{
+	font-family:Verdana, Tahoma,Arial,Helvetica,Verdana,sans-serif,"Times New Roman","Lucida Grande" ;
 }

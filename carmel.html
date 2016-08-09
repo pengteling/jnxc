@@ -4,8 +4,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <title>Carmel - Chem</title>
-    <meta name="description" content="">
+    <title>Carmel Chem  -  We look for chemicals for you</title>
+    <meta name="description" content="Carmel Chem is a Silicon Valley located company providing consultation and sales service for chemical industry as well as academic research groups.">
     <meta name="author" content="ptl">
     <link rel="stylesheet" href="dist/css/carmel.css">     
   </head>
@@ -22,28 +22,27 @@
             <nav>
               <button class="togl v-sm"></button>
               <ul>
-                <li>
-                  <a href="/portfolio" title="Portfolio impressie" >impressie</a>
+              <li>
+                  <a href="#home" class="smoothScroll" title="Portfolio impressie" >home</a>
                 </li>
                 <li>
-                  <a href="/diensten" title="Dienstverlening" >service</a>
+                  <a href="#about" class="smoothScroll" title="Portfolio impressie" >about</a>
                 </li>
                 <li>
-                  <a href="/over-turnyourhead360" title="Over Turnyourhead360" >360</a>
-                </li>
+                  <a href="#service" class="smoothScroll" title="Dienstverlening" >service</a>
+                </li>                
                 <li>
-                  <a href="/blog/" title="Lees een artikel" >blog</a>
+                  <a href="#contact" class="smoothScroll" title="Neem contact op" >contact</a>
                 </li>
-                <li>
-                  <a href="/contact" title="Neem contact op" >contact</a>
-                </li>
+
               </ul>
             </nav>
           </div>
         </div>
       </div>
     </header>
-    <div class="hero-container green wi">
+
+    <div class="hero-container green wi" id="home">
       <h1 class="hero">&ldquo; We look for chemicals for you  &bdquo;</h1>
     </div>
 
@@ -53,75 +52,131 @@
           <i class="ss-emptyheart"></i>
           <i class="icon-six"></i>
         </span>
-        <h1>Tell us what chemical you are looking for:
-</h1>
-        <p>Turnyourhead360 maakt websites en applicaties met ouderwets veel zorg en liefde. We zorgen dat ze perfect werken op &ldquo;The Internet Of Things&ldquo;.</p>
-        <a href="/portfolio" title="Portfolio impressie" class="bt bt-main">Impressie</a>
+        <h1>Tell us what chemical you are looking for:</h1>
+        <div class="frm">
+        <form action="mail.asp" method="post">
+          <div class="row">
+            <div class="col-6 label"><label for="chemicalname"></label>Chemical Name:</div>
+            <div class="col-6 ipt"><input type="text" name="chemicalname" id="chemicalname" class="ipt-txt" required="required"></div>
+          </div>
+          <div class="row">
+            <div class="col-6 label"><label for="casno"></label>CAS NO:</div>
+            <div class="col-6 ipt"><input type="text" name="casno" id="casno" class="ipt-txt" required="required"></div>
+          </div>
+          <div class="row">
+            <div class="col-6 label"><label for="yourname"></label>Your Name:</div>
+            <div class="col-6 ipt"><input type="text" name="yourname" id="yourname" class="ipt-txt" required="required"></div>
+          </div>
+          <div class="row">
+            <div class="col-6 label"><label for="yourmail"></label>Your Email Address:</div>
+            <div class="col-6 ipt"><input type="email" name="yourmail" id="yourmail" class="ipt-txt" required="required"></div>
+          </div>
+
+        
+        
+        <input type="submit" class="bt bt-solid" id="submit" value="Submit">
+        </form>
+        </div>
       </article>
     </section>
-
+<section  id="about">
     <div class="hero-container light wi">
-      <h2 class="hero">&ldquo; Turnyourhead360 is een kleine <br/> full service web boutique &bdquo;</h2>
-      <a href="/over-turnyourhead360" title="Over 360" class="bt bt-solid">Over Turnyourhead360</a>
+      <h2 class="hero">About Carmel Chem</h2>
+      
     </div>
 
     <div class="hero-container">
-      <h2 class="hero">&ldquo; Inhoud, functie, eenvoud en snelheid &bdquo;</h2>
+      <h2 class="hero">Carmel Chem  is a Silicon Valley located company  providing consultation and sales service for chemical industry as well as academic research groups.
+</h2>
     </div>
 
     <div class="container maincontent">
       <div class="row">
         <div class="col-6">
-          <h2>We helpen je natuurlijk</h2>
-          <p>Ben je op zoek naar een betrouwbare partner die jouw organisatie op weg helpt in de hectische maar fantastische online wereld?</p>
+          
+          <p>We look for the cheapest vendors for you.</p>
         </div>
         <div class="col-6">
-          <h2>Netwerk van talent</h2>
-          <p>Websites, intranets, extranets en apps maak je niet in je eentje. Dat doen we met jou. En met een bewezen talentvol team van vakspecialisten!</p>
+          <p>You don’t know which chemical vendors offering the best price for the chemical you are  looking for? Let us know, we search and compare;</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          
+          <p>
+          The chemicals you are using are too expensive from the major chemical vendors? Let us know, we look for a cheaper  source for you;</p>
+        </div>
+        <div class="col-6">
+          <p>You find a nice chemical vendor in China but you are scared of the complicated purchasing process? Let us know, we buy you  the chemical with competitive price.</p> 
+        </div>
+      </div>
+
+    </div>
+
+    </section>
+
+<section id="service">
+   <div class="hero-container red wi">
+      <h2 class="hero">Services</h2>
+      <!-- <a href="/contact" title="Neem contact op" class="bt bt-solid">Mag ook morgen</a> -->
+    </div>
+
+   <div class="container maincontent">
+      <div class="row">
+        <div class="col-4">          
+          <h2>We look for the cheapest chemical source;</h2>
+        </div>
+        <div class="col-4">         
+          <h2>Simply send us names of the chemicals you are looking for;</h2>
+        </div>
+        <div class="col-4">          
+          <h2>We are also offering synthetic chemistry related consultation services, including synthetic routes, synthetic technology as well as  trouble shooting in industrial production.</h2>
         </div>
       </div>
     </div>
+</section>
 
-    <section class="split-blocks">
-      <article>
-        <a href="/contact" class="bt bt-solid" title="Neem contact op">Kopje thee doen? </a>
-        <br/>
-        <a href="/werkwijze" class="bt bt-main" title="Werkwijze">Werkwijze</a>
-      </article>
-    </section>
 
-    <aside>
-      <div class="container">
-        <div class="row">
-          <ul class="col-12">
-            <li><a href="/portfolio" title="Portfolio">Impressie</a></li>
-            <li><a href="/over-turnyourhead360" title="Over Turnyourhead360">Over 360</a></li>
-            <li><a href="/diensten" title="Onze diensten">Diensten</a></li>
-            <li><a href="/werkwijze" title="Hoe we werken">Werkwijze</a></li>
-            <li><a href="/partners" title="Waarmee we samenwerken">Partners</a></li>
-            <li><a href="/blog/" title="Blog">Blog</a></li>
-            <li><a href="/contact" title="Neem contact op">Contact</a></li>
-            <li><a href="/" title="Homepage">Home</a></li>
-          </ul>
-        </div>
-      </div>
-    </aside>
+<section id="contact">
+  
+<div class="hero-container light wi">
+      <h2 class="hero">Contact</h2>
+      
+    </div>
+
+
+    <div class="container maincontent" style="margin: 3em 0">
+<div class="row">
+<div class="col-6">
+
+<h2>Carmel Chem</h2>
+<p>Berkeley, CA 94720, California, USA<br>
+  Tel: +1 510 388 1511<br>
+  Email: <a href="mailto:support@carmel-chem.com">support@carmel-chem.com</a></p>
+</div>
+<div class="col-6" style="margin: 0;padding: 2% 0 0 0;">
+ <iframe style="border:0px;" height="205" marginheight="0" src="/map.html" frameborder="0" width="366" marginwidth="0" scrolling="no">
+      
+ </iframe>
+ </div>
+ </div>
+ </div>
+</section>
+
     <footer>
       <section>
         <p>
-          +31&nbsp;6&nbsp;39&nbsp;77&nbsp;52&nbsp;49
+         +1 510 388 1511
           <br class="togl">
-          - <a href="mailto:edgar@turnyourhead360.nl" title="Stuur een e-mail">edgar@turnyourhead360.nl</a> -
+          - <a href="mailto:support@carmel-chem.com" title="Stuur een e-mail">support@carmel-chem.com</a> -
           <br class="togl">
-          KvK&nbsp;542&nbsp;419&nbsp;28 -
-          <a href="/over-deze-website" title="Proclaimer, privacy en cookieverklaring">
-            <small>Over deze website</small>
-          </a>
+          copy&copy;carmel-chem.com all rights reserved.
         </p>
       </section>
     </footer>
    
-      <script src="http://localhost:8080/webpack-dev-server.js"></script>
+     <!--  <script src="http://localhost:8080/webpack-dev-server.js"></script> -->
   <!-- <script src="js/index.js"></script> -->
 
   <!-- <script type="text/javascript" src="/js/fullpage/vendors/scrolloverflow.min.js"></script> -->

@@ -8,7 +8,9 @@ if (process.env.NODE_ENV !== 'production') { //开发环境下 raw-loader  html�
 
 require("jquery");
 require("./pJqueryAppearAnimateCSS3/jac.js"); //动画
+//require("./smoothscroll/smoothscroll.js");
 
+//require('imports?$=jquery!./smoothscroll/smoothscroll.js');
 //require('./waypoints/jquery.waypoints.min.js');
 
 
@@ -48,3 +50,19 @@ new Headroom(header, {
     }
 }).init();
 }());
+
+$(function() {
+$(".frm form").submit(function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $.post("email.asp", $(".frm form").serialize(), function(data, status) {
+        if (status == "success") {
+            alert("thanks for your submit, we'll contact you later");
+        } else {
+            alert("wrong" + status);
+        }
+    })
+});
+
+});
+
