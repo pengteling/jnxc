@@ -1262,19 +1262,23 @@ span.logo{
 	background:url(../images/logo-1.png) center center no-repeat;
 	background-size:cover;
 }
-
+@media (min-width: 768px){
 .frm .label{
 	padding:1em 1%;
+	text-align:right;
 }
 .frm .ipt{
 	
 	padding:1em 1%;
+	text-align:left;
 
+}
 }
 .frm .ipt input.ipt-txt{
 	border-bottom:#ccc 1px solid;
-	width:90%;
+	width:60%;
 }
+
 
 .hero-container .hero {
     text-align: center;
@@ -1283,6 +1287,27 @@ span.logo{
     max-width: 1020px; 
 
 }
+.hero-container h1.hero {
+    
+    font-size: 2.5em;
+    line-height: 1.0em;
+    letter-spacing: 0.06em;
+    word-spacing: 0.1em;
+    
+
+}
+@media (max-width: 768px){
+
+	.hero-container h1.hero  {
+	    text-align: center;
+	    font-size: 1.25em;
+	    line-height: 1.25em;
+	    max-width: 1020px; 
+
+	}
+}
+
+
 header h1 a span {
 	margin-top: 0;
 }
@@ -1295,4 +1320,8 @@ header h1 a span {
 }
 nav{
 	font-family:Verdana, Tahoma,Arial,Helvetica,Verdana,sans-serif,"Times New Roman","Lucida Grande" ;
+}
+
+.row i.fa{
+	font-size:1em; padding-right: 0.8em;
 }
