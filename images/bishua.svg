@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<svg  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<pattern id="p1" x="0" y="0" width="0.2" height="0.2" patternUnits="objectBoundingBox" patternContentUnits="userSpaceOnUse">
+			<circle cx="10" cy="10" r="5" fill="red"></circle>
+			<polygon points="30 10 60 50 0 50" fill="green"></polygon>
+		</pattern>
+	</defs>
+
+	<rect x="100" y="100" fill="url(#p1)" width="500" height="550"></rect>
+</svg>
