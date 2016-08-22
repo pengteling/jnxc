@@ -1,0 +1,116 @@
+@charset 'utf-8';
+/*  gem install compass-normalize  */
+@import "normalize","mixin","comm";
+@include normalize();
+
+$green:#0cd6c8;
+$purple:#7a4ffd;
+body{	
+	font-family: "Arial","Microsoft YaHei", "SimHei", "SimSun";		
+}
+
+.head{
+	height:1.32rem;
+	background:#4b4b4b;
+	.logo{
+		@include abs(2rem,0.62rem,0.4rem,0.34rem,null,null,'../images/fy6/logo.png');
+		a{
+			@extend .block;
+		}
+	}
+	.tel{
+		@include abs(2.56rem,0.56rem,null,0.37rem,0.41rem,null,'../images/fy6/head-tel.png');
+	}
+
+}
+.banner{
+	height:3.94rem;
+	background:url(../images/fy6/banner.jpg) center center no-repeat;
+	background-size:100% 100%;
+}
+.tit{
+	color:#4f4f4f;
+	font-size:0.48rem;
+	text-align:center;
+	line-height:0.84rem;
+	padding-top: 0.26rem;
+}
+.im1 ul{
+	display:flex;
+	justify-content:space-around; 
+	flex-wrap:wrap;
+	align-content:space-around;
+	padding-bottom: 0.48rem;
+}
+.im1 ul li{
+	width:2.8rem;
+	height:1rem;
+	line-height:1rem;
+	text-align:center;
+	border-radius:0.08rem;
+	margin-top: 0.31rem;
+	a{
+		@extend .block;
+		font-size:0.4rem;
+		color:#fff;
+	}
+}
+.box-shadow-1{  
+	background:#66cccc;
+    box-shadow:inset 0 -0.06rem 0.06rem #007373;     
+}  
+.box-shadow-2{  
+	background:#ff6699;
+    box-shadow:inset 0 -0.06rem 0.06rem #a53c5f;     
+}  
+.box-shadow-3{  
+	background:#33cccc;
+    box-shadow:inset 0 -0.06rem 0.06rem #1e8484;     
+}  
+.box-shadow-4{  
+	background:#ff9933;
+    box-shadow:inset 0 -0.06rem 0.06rem #955d24;     
+}  
+.box-shadow-5{  
+	background:#74df9c;
+    box-shadow:inset 0 -0.06rem 0.06rem #22944c;     
+}  
+
+.box-shadow-6{  
+	background:#9966cc;
+    box-shadow:inset 0 -0.06rem 0.06rem #743eaa;    
+}  
+.s30{
+	height:0.3rem;
+	background:#f0f0f0;
+}
+/* 
+.im1{
+	position: relative;
+	width:100%;
+	height: 19.2rem;
+	background:url(../images/im1-bg.jpg) center bottom no-repeat #2b2e3f;
+	background-size:100% auto;
+	.tit{
+		@include abscenter(4.26rem,1.28rem,1.92rem,'../images/logo.png');
+	}
+	.txt{
+		@include abscenter(9.61rem,5.41rem,4.4rem,'../images/im1-txt.png');
+	}
+	.btn{
+		@include abscenter(3.38rem,1.04rem,10.85rem);
+		border:#fff 1px solid;
+		border-radius:0.03rem;
+		box-shadow:0.02rem 0.02rem 0.03rem #e6e6e8;
+		line-height: 1.04rem;
+		font-size: 0.36rem;
+		a{color: #fff;}
+		
+	}
+	.tel{
+		@include abscenter(6rem,1.04rem,12.44rem);
+		font-size: 0.6rem;
+		color: #17cbbf;
+		text-align: center;
+	}
+} */
