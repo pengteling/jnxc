@@ -31,9 +31,9 @@ module.exports = {
     // custom: ['./js/custom.js'],
     },
     output: {
-        path: './dist/',
-        publicPath: '/dist/', //调试时
-        //publicPath: './../', //发布时
+        path: './fy6/',
+        //publicPath: '/dist/', //调试时
+        publicPath: './../', //发布时
         filename: './js/[name].js'
     },
 
@@ -124,7 +124,7 @@ module.exports = {
         ,
         //定义环境 程序中判断
         new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify('production-dev')
+            'process.env.NODE_ENV': JSON.stringify('production')
         }),
         //压缩js 除$ jQuery
         new webpack.optimize.UglifyJsPlugin({

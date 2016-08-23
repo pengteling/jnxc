@@ -84,6 +84,175 @@ body{
 	height:0.3rem;
 	background:#f0f0f0;
 }
+.im2{
+	overflow:hidden;
+	padding-bottom: 0.34rem;
+	.im2-l{
+		margin-top: 0.14rem;
+		float: left;
+		margin-left: 1.41rem;
+		.pic{
+			width:2.6rem;
+			height: 2.02rem;
+			background:url(../images/fy6/chart.png);
+			background-size:100% 100%;
+		}
+		.btn{
+			margin-top: 0.34rem;
+			width:2.56rem;
+			height: 0.68rem;
+			border-radius:0.07rem;
+			background:#66cccc;
+			box-shadow:inset 0 -0.06rem 0.06rem #399898;    
+			a{
+				@extend .block;
+				color:#fff;
+				font-size: 0.3rem;
+				text-align: center;
+				line-height: 0.68rem;
+			}
+		}
+	}
+	.im2-r{
+		float: left;
+		margin-top: 0.22rem;
+		margin-left: 1.24rem;
+		font-size: 0.26rem;
+		color:#5d5d5d;
+		width:4.28rem;
+		line-height: 0.42rem;
+
+	}
+}
+
+.im3{
+	padding-bottom: 0.52rem;
+	.tit2{
+		font-size: 0.3rem;
+		line-height: 0.68rem;
+		color: #333;
+		text-align: center;
+		font-weight: 600;
+		padding:0.4rem 0 0.2rem;
+	}
+	.btn{
+		text-align: center;
+		a{
+			display: inline-block;
+			width:3.19rem;
+			height: 0.87rem;
+			line-height: 0.87rem;
+			font-size: 0.36rem;
+			color:#fcfcfc;
+			border-radius:0.07rem;
+			background:#33cc66;
+			box-shadow:inset 0 -0.06rem 0.06rem #1f9647;  
+			&:first-child{
+				margin-right: 1.02rem;
+			}			
+		}
+	}
+}
+.footer{
+	overflow:hidden;
+	margin-bottom: 1.7rem;
+	.ft-l{
+		float: left;
+		margin: 0.3rem 0 0 1.1rem;
+		.logo-24{
+			width:2.17rem;
+			height: 0.6rem;
+			background:url(../images/fy6/logo-edu24.jpg);
+			background-size:100% 100%;
+		}
+		.link{
+			height: 0.64rem;
+			line-height: 0.64rem;
+			a{		
+				display: inline-block;
+				float: left;		
+				font-size: 0.22rem;
+				color:#01a4ec;
+				margin-right: 0.3rem;
+				
+			}
+		}
+	}
+	.ft-r{
+		width:6.6rem;
+		float: left;
+		margin: 0.32rem 0 0 0.3rem;
+		font-size: 0.24rem;
+		color: #5f5f5f;
+		line-height: 0.32rem;
+		.addr{
+			margin-bottom: 0.1rem;
+		}
+	}
+}
+.nav{
+	position: fixed;
+	bottom:0;
+	width:100%;
+	height:1.7rem;
+	background:#66cccc;
+	display:flex;
+	a{
+		display: inline-block;
+		position: relative;
+		font-size: 0.24rem;
+		color: #fbfbfb;
+		text-align: center;
+		width:33.33%;
+		box-sizing:border-box;
+		padding-top: 1.28rem;
+	}
+	a:nth-child(1){
+
+		&::before{
+		position: absolute;
+		left: 50%;
+		margin-left: -0.45rem;
+		top:0.2rem;
+		content: "";
+		background:url(../images/fy6/ico-1.png);
+		width:0.9rem;
+		height: 0.9rem;
+		background-size:100% 100%;	
+		}	
+	}
+
+	a:nth-child(2){
+
+		&::before{
+		position: absolute;
+		left: 50%;
+		top:0.2rem;
+		margin-left: -0.45rem;
+		content: "";
+		background:url(../images/fy6/ico-2.png);
+		width:0.9rem;
+		height: 0.9rem;
+		background-size:100% 100%;	
+		}	
+	}
+
+	a:nth-child(3){
+
+		&::before{
+		position: absolute;
+		left: 50%;
+		top:0.2rem;
+		margin-left: -0.45rem;
+		content: "";
+		background:url(../images/fy6/ico-3.png);
+		width:0.9rem;
+		height: 0.9rem;
+		background-size:100% 100%;	
+		}	
+	}
+
+}
 /* 
 .im1{
 	position: relative;
