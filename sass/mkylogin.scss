@@ -1,0 +1,44 @@
+@charset 'utf-8';
+/*  gem install compass-normalize  */
+@import "normalize","mixin","comm";
+@include normalize();
+
+html,body{
+	height:100%;
+	overflow:hidden;
+}
+.mainbg{
+	width:100%;
+	height: 100%;
+	position: relative;
+}
+.mainbg.bg1{
+	
+	background:url(../images/login/bg1.jpg) center center no-repeat;
+	background-size:cover;
+	
+}
+.mainbg.bg2{
+	background:url(../images/login/bg2.jpg) center center no-repeat;
+	background-size:cover;
+
+}
+.mainbg.bg3{
+	background:url(../images/login/bg3.jpg) center center no-repeat;
+	background-size:cover;
+}
+.loginform{
+	position: absolute;
+	width:537px;
+	height:410px;
+	background:url(../images/login/login-btn.png);
+	left:0;
+	right:0;
+	top: 0;
+	bottom:0;
+	margin: auto ;
+	opacity:0;
+}
+.visible{
+	opacity:1;
+}

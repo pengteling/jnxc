@@ -25,13 +25,13 @@ module.exports = {
     {
         //index: ['./js/index.js'],
         //carmel: ['./js/carmel.js']
-        fy6: ['./js/fy6.js']
-    // mky: ['./js/mky.js']
+        //fy6: ['./js/fy6.js']
+        mkylogin: ['./js/mkylogin.js']
     // ,
     // custom: ['./js/custom.js'],
     },
     output: {
-        path: './fy6/',
+        path: './mkylogin/',
         //publicPath: '/dist/', //调试时
         publicPath: './../', //发布时
         filename: './js/[name].js'
