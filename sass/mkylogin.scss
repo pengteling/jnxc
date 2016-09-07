@@ -7,6 +7,9 @@ html,body{
 	height:100%;
 	overflow:hidden;
 }
+body{
+	@extend .yahei;
+}
 .mainbg{
 	width:100%;
 	height: 100%;
@@ -31,14 +34,133 @@ html,body{
 	position: absolute;
 	width:537px;
 	height:410px;
-	background:url(../images/login/login-btn.png);
-	left:0;
-	right:0;
-	top: 0;
-	bottom:0;
-	margin: auto ;
+	/* background:url(../images/login/login-btn.png); */
+	background:rgba(44,46,58,0.8);
+	box-shadow:3px 0 7px rgba(0,0,0,0.35),0px 3px 7px rgba(0,0,0,0.35);
+	left:50%;
+	margin-left: -268px;	
+	bottom:50%;
+	margin-bottom: -185px;
 	opacity:0;
+	.logo{
+		@include abs(50px,60px,60px,36px,null,null,"../images/login/logo.png");
+	}
+	.zhname{
+		@include abs(376px,44px,111px,30px,null,null,"../images/login/zhname.png");
+	}
+	.enname{
+		@include abs(376px,20px,111px,74px,null,null,"../images/login/enname.png");
+	}
+	.ipt{
+		width:346px; height:52px; line-height:52px;	 border-radius:4px;	
+		position: absolute;left:96px;
+		input{
+			width:100%;
+			height: 100%;
+			background: transparent;
+			box-sizing:border-box;
+			padding-left: 64px;
+			color: #bbb8cc;
+			font-size: 14px;
+		}
+	}
+	.ipt-user{
+		top:133px;
+		background:url(../images/login/ico-user.png) 13px 13px no-repeat #293040;
+
+	}
+	.ipt-pwd{
+		top: 196px;
+		background:url(../images/login/ico-pwd.png) 13px 13px no-repeat #293040;
+	}
+	.btn{
+		@include abs(346px,51px,96px,262px,null,null);
+		border:#65c5c5 1px solid;
+		border-radius:4px;
+		background:rgba(#65c5c5,0.35);
+		transition: all 0.3s;
+			&:hover{
+				background:rgba(#65c5c5,0.55);
+			}
+		input{
+			width:100%;
+			height: 100%;
+			background:transparent;
+			/* line-height: 96px; */
+			@extend .reset;
+			color: #fffefe;
+			font-size: 16px;
+			font-weight: bolder;	
+			letter-spacing: 8px;
+			@extend .yahei;
+
+		}
+		opacity: 0;
+		&.visible{
+			opacity: 1;
+		}
+
+	}
+	.checkbox{
+		@include abs(200px,23px,102px,331px,null,null);
+		input{display: none;}
+		label{
+			font-size: 14px;		
+			font-weight: bold;	
+			padding-left: 40px;
+			cursor: pointer;
+		}
+		input:checked + label{
+			color: #65c5c5;
+			&::before{
+				content: "";
+				position: absolute;
+				width:23px;
+				height: 23px;
+				left: 0;
+				top: 0;
+				background:url(../images/login/checked.png);
+			}
+
+		}
+		input:not(checked) + label{
+			color:#bbb8cc;
+			&::before{
+				content: "";
+				position: absolute;
+				width:23px;
+				height: 23px;
+				left: 0;
+				top: 0;
+				background:url(../images/login/checkbox.png);
+			}
+		}
+	}
+
 }
+
 .visible{
 	opacity:1;
+}
+
+
+.toplink{
+	position: absolute;
+	right:45px;
+	top: 30px;
+	z-index:1;
+	color:#e5e5e4;
+	font-size:14px;
+	a{
+		color:#e5e5e4;
+	}
+	word-spacing:5px;
+}
+.footer{
+	position: absolute;
+	width:100%;
+	bottom:10%;
+	color:#e5e5e4;
+	font-size:18px;
+	text-align:center;
 }
