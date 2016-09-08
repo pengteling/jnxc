@@ -1,0 +1,10 @@
+@charset 'utf-8';
+/*  gem install compass-normalize  */
+@import "normalize","mixin","comm";
+@include normalize();
+
+.box{
+	width:200px;
+	height: 200px;
+	background:#0f0;
+}

@@ -26,14 +26,15 @@ module.exports = {
         //index: ['./js/index.js'],
         //carmel: ['./js/carmel.js']
         //fy6: ['./js/fy6.js']
-        mkylogin: ['./js/mkylogin.js']
+        // mkylogin: ['./js/mkylogin.js']
+        study: ['./js/study.js']
     // ,
     // custom: ['./js/custom.js'],
     },
     output: {
-        path: './mkylogin/',
-        //publicPath: '/mkylogin/', //调试时
-        publicPath: './../', //发布时
+        path: './study/',
+        publicPath: '/study/', //调试时
+        //publicPath: './../', //发布时
         filename: './js/[name].js'
     },
 
