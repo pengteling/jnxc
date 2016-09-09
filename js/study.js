@@ -12,8 +12,31 @@ $(".box")
     })
     .velocity({
         width: '200px',
-        opacity: 1
-    }, 1000); //个体连续动画
+        opacity: 1,
+    //tween: 5 // Optional 初始设置个值 如果不设置 则取得的null
+    }, {
+        duration: 1000
+        //,
+        // progress: function(elements, complete, remaining, start, tweenValue) {
+
+        //     console.log((complete * 100) + "%");
+        //     console.log(remaining + "ms remaining!");
+        //     console.log("The current tween value is " + tweenValue)
+
+        // }, //进度  
+
+        // begin: function() {
+
+        //     alert("动画我要开始了");
+
+        // }, //动画开始执行的函数  
+
+        // complete: function() {
+
+        //     alert("动画结束了");
+
+    // }
+    }); //个体连续动画
 
 
 
@@ -41,20 +64,48 @@ $.Velocity.RegisterEffect('ptl.pulse', {
     calls: [
         [{
             scaleX: 1.1
-        }, 0.3],
+        }, 0.3, {
+            progress: function(elements, complete, remaining, start, tweenValue) {
+
+                console.log((complete * 100) + "%");
+                console.log(remaining + "ms remaining!");
+                console.log("The current tween value is " + tweenValue)
+
+            }, //进度  
+        }],
         [{
             scaleX: 1.0
         }, 0.3],
         [{
             rotateY: 360
         }, 0.4]
-    ]
+    ],
+
+
+    begin: function() {
+
+        alert("动画我要开始了");
+
+
+    }, //动画开始执行的函数  
+
+    complete: function() {
+
+        alert("动画结束了");
+
+    }
 });
 $(".box").on('mouseover', function() {
-    $(this).velocity('ptl.pulse');
+    $(this).velocity('ptl.pulse',
+        {
+            duration: 2000
+
+        });
+
 });
 
 
 
 
 });
+
