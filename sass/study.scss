@@ -3,8 +3,72 @@
 @import "normalize","mixin","comm";
 @include normalize();
 
-.box{
-	width:200px;
-	height: 200px;
-	background:#0f0;
+#featureAnimation{
+		width: 100%;
+		height: 200px;
+		background: #000;
+		color: #fff;
+		position:relative;
+		overflow: hidden;  		
+	}
+
+	#whyGSAP  {
+	  text-align: center;
+	  font-size:50px;
+	  position:absolute;
+	  width: 100%;
+	  font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+	}
+	#whyGSAP  span{
+		display: inline-block;
+	}
+	.featureTextWhite span{
+		display: inline-block;
+	}
+	.featureTextGreen {
+		width: 100%;
+	  position:absolute;
+	  color:#91e600;
+	  font-weight: bold;
+	  text-align: center;
+	  font-size:50px;
+	}
+	.star {
+	  position: absolute;
+	  width: 16px;
+	  height: 16px;
+	  display: none;
+	}
+	.featureTextWhite{
+		width: 100%;
+	  position:absolute;
+	  left:50%;
+	  width:840px;
+	  margin-left: -360px;
+	  color:#91e600;
+	  font-weight: bold;
+	 text-align: center;
+	  font-size:50px;
+	  visibility:hidden;
+	}
+
+	#browserIcons {
+  top:64px;
+  left: 50%;
+  margin-left: -320px;
+  width: 92px;
+  height: 92px;
+  position: absolute;
+  text-align:left;
+}
+#browserIcons img {
+  position:absolute;
+}
+.featureTextMinor {
+  color:#CCCCCC;
+  font-weight:normal;
+  font-size:20px;
+  position:absolute;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+  visibility:hidden;
 }
