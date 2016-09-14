@@ -4,25 +4,36 @@ require("./velocityjs/velocity.min.js"); //动画
 require("./velocityjs/velocity.ui.js"); //插件
 require("./lettering/jquery.lettering-0.6.1.min.js");
 $(function() {
-var text = $("#whyGSAP"),
-    chars = text.lettering().find("span"),
-    centerIndex = Math.floor(chars.length / 2);
-for (i = 0; i < chars.length; i++) {
+gasp();
+function gasp() {
+    var text = $("#whyGSAP"),
+        chars = text.lettering().find("span"),
+        centerIndex = Math.floor(chars.length / 2);
+    for (i = 0; i < chars.length; i++) {
 
-    //tl.from(chars[i], 1.8, {x:(i - centerIndex) * 40, opacity:0, ease:Power2.easeOut}, i * 0.1);
-    $(chars[i]).velocity({
-        translateX: [0, (i - centerIndex) * 40],
-        opacity: [1, 0]
-    }, 1800, {
-        easing: 'easeOutQuad',
-        sequenceQueue: false
-    })
-        .velocity({
-            rotateX: -720,
-            colorAlpha: 0,
-            scale: 0.3
-        }, 1500)
-    ;
+        //tl.from(chars[i], 1.8, {x:(i - centerIndex) * 40, opacity:0, ease:Power2.easeOut}, i * 0.1);
+        $(chars[i]).velocity({
+            translateX: [0, (i - centerIndex) * 40],
+            opacity: [1, 0]
+        }, {
+            duration: 1800,
+            easing: 'easeOutQuad',
+        //sequenceQueue: false,
+        //loop: true
+        })
+            .velocity({
+                rotateX: -720,
+                opacity: 0,
+                scale: 0.3
+            }, {
+                duration: 1500,
+                // complete: function() {
+                //     gasp(); //调用自身实现无限循环？
+                // }
+            //loop: true
+            })
+        ;
+    }
 }
 
 
