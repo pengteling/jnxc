@@ -27,9 +27,9 @@ function gasp() {
                 scale: 0.3
             }, {
                 duration: 1500,
-                // complete: function() {
-                //     gasp(); //调用自身实现无限循环？
-                // }
+            // complete: function() {
+            //     gasp(); //调用自身实现无限循环？
+            // }
             //loop: true
             })
         ;
@@ -37,6 +37,20 @@ function gasp() {
 }
 
 
+});
+
+require("./jqueryAddress/jquery.address-1.6.js");
+$(function() {
+$.address.change(function(event) {
+    // do something depending on the event.value property, e.g.  
+    // $('#content').load(event.value + '.xml');  
+    //alert("#erer");
+    console.log(event.path);
+    console.log(event.queryString);
+});
+$('a').click(function() {
+    //$.address.value($(this).attr('href'));
+});
 });
 // $(function() {
 // $(".box")
