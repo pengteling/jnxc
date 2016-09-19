@@ -47,10 +47,109 @@ $.address.change(function(event) {
     //alert("#erer");
     console.log(event.path);
     console.log(event.queryString);
+
 });
 $('a').click(function() {
     //$.address.value($(this).attr('href'));
 });
+});
+
+//superscrollorama
+require("./TweenMax/tweenmax.min.js");
+require("./superscrollorama/jquery.superscrollorama.js");
+$(function() {
+var controller = $.superscrollorama({
+    triggerAtCenter: false,
+    playoutAnimations: true,
+    reverse: true //为0
+});
+// controller.addTween(
+//     $(".box2"),
+//     // TweenMax.fromTo($(".box2 h3"), 1,
+//     //     {
+//     //         css: {
+//     //             x: 0,
+//     //             y: 0,
+
+//     //         },
+//     //         immediateRender: true //默认就把这个设置到 From属性
+//     //     },
+//     //     {
+//     //         css: {
+//     //             x: 300,
+//     //             y: 300,
+
+//     //         }
+//     //     }
+//     // )
+
+
+//     (new TimelineMax())
+//         .append([
+//             TweenMax.fromTo($('.box2 h3'), 1,
+//                 {
+//                     css: {
+//                         y: 200
+//                     },
+//                     immediateRender: true
+//                 },
+//                 {
+//                     css: {
+//                         y: 600
+//                     }
+//                 }),
+//             TweenMax.fromTo($('.box2 h3'), 1,
+//                 {
+//                     css: {
+//                         x: 200
+//                     },
+//                     immediateRender: true
+//                 },
+//                 {
+//                     css: {
+//                         x: 600
+//                     }
+//                 })
+//         ]),
+//     500 // scroll duration of tween
+
+
+
+
+
+// );
+
+controller.pin(".box3",300,{
+	anim: (new TimelineMax())
+        .append([
+            TweenMax.fromTo($('.box3 h3'), 1,
+                {
+                    css: {
+                        y: 000
+                    },
+                    immediateRender: true
+                },
+                {
+                    css: {
+                        y: 300
+                    }
+                }),
+            TweenMax.fromTo($('.box3 h3'), 1,
+                {
+                    css: {
+                        x: 200
+                    },
+                    immediateRender: true
+                },
+                {
+                    css: {
+                        x: 600
+                    }
+                })
+        ])
+}
+    
+)
 });
 // $(function() {
 // $(".box")
