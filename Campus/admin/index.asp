@@ -31,6 +31,15 @@
 </style>
 </head>
 <body>
+ <!-- body 顶部加上如下代码 -->
+  <div class="weui-pull-to-refresh-layer">
+    <div class="pull-to-refresh-arrow"></div> <!-- 上下拉动的时候显示的箭头 -->
+    <div class="pull-to-refresh-preloader"></div> <!-- 正在刷新的菊花 -->
+    <div class="down">下拉刷新</div><!-- 下拉过程显示的文案 -->
+    <div class="up">释放刷新</div><!-- 下拉超过50px显示的文案 -->
+    <div class="refresh">正在刷新...</div><!-- 正在刷新时显示的文案 -->
+  </div>
+
 <%
 
 
@@ -75,35 +84,62 @@ end sub
 sub index()
 
 %>
-
+<div class="weui_panel_hd"><a href="index.asp" class="weui_btn weui_btn_mini weui_btn_primary">所有订单</a> <a href="index.asp?flag=0" class="weui_btn weui_btn_mini weui_btn_primary">未确认付款</a> <a href="index.asp?flag=1" class="weui_btn weui_btn_mini weui_btn_primary">已付款未发货</a> <a href="index.asp?flag=2" class="weui_btn weui_btn_mini weui_btn_primary">已发货</a></div>
 <div class="weui_cells weui_cells_access">
 
 <%
 Easp.Db.PageParam = "page"
 'Easp.Var("page") = 2
-Easp.Db.PageSize = 1
+Easp.Db.PageSize = 20
 
-Easp.Var("likeKey") = "%{=key}%"
-if Easp.Var("likeKey")<>"" then
-Set rs = Easp.Db.GetRS("select * from orderlist  where isdel=0 and  (username Like {likeKey} or  mobile Like {likeKey}) order by id desc ")
+'Easp.Var("flah") = "%{=key}%"
+if Easp.Var("flag")<>"" then
+Set rs = Easp.Db.GetRS("select * from orderlist  where isdel=0 and flag={flag} order by id desc ")
 else
 Set rs = Easp.Db.GetRS("select * from orderlist  where isdel=0 order by id desc ")
 end if
 while not rs.eof
 
 %>
-<a class="weui_cell" href="javascript:;">
+<a class="weui_cell" href="order.asp?id=<%=rs("id")%>">
     <div class="weui_cell_bd weui_cell_primary">
-      <p>cell standard</p>
+      <p>
+      <%
+if rs("sport")>0 then 
+  response.write "运动服"&rs("sport")&"套<br>"
+end if
+
+if rs("t_shirt")>0 then 
+  response.write "短袖T恤"&rs("t_shirt")&"件<br>"
+end if
+
+if rs("shirt")>0 then 
+  response.write "秋季衬衣"&rs("shirt")&"件<br>"
+end if
+
+if rs("trousers")>0 then 
+  response.write "秋季长裤"&rs("trousers")&"条<br>"
+end if
+
+if rs("skirt")>0 then 
+  response.write "短裙"&rs("skirt")&"件<br>"
+end if
+
+if rs("suit")>0 then 
+  response.write "西装外套"&rs("suit")&"件<br>"
+end if
+
+if rs("vest")>0 then 
+  response.write "毛衣背心"&rs("vest")&"件<br>"
+end if
+
+      %></p>
     </div>
-    <div class="weui_cell_ft">说明文字</div>
+    <div class="weui_cell_ft"><%
+      response.write rs("username") &"" & rs("mobile")
+      %></div>
   </a>
-  <a class="weui_cell" href="javascript:;">
-    <div class="weui_cell_bd weui_cell_primary">
-      <p>cell standard</p>
-    </div>
-    <div class="weui_cell_ft">说明文字</div>
-  </a>
+  
 
 <%
 
@@ -131,6 +167,12 @@ rs.close
 <script src="//cdn.bootcss.com/jquery-weui/0.8.0/js/city-picker.min.js"></script>
 <script>
 	$(function(){
+    $(document.body).pullToRefresh();
+    $(document.body).on("pull-to-refresh", function() {
+  //do something
+  window.location.reload();
+  $(document.body).pullToRefreshDone(); //重置
+});
 		$("#login").on("click",function(e){
 
 			

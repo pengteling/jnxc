@@ -262,13 +262,13 @@
 		    return patten.test(mobile);
 		}
 		var prices={
-			"sport":135,
-			"shirt":50,
-			"suit":120,
-			"vest":70,
-			"trousers":70,
-			"skirt":70,
-			"t_shirt":70
+			"sport":145,
+			"shirt":67,
+			"suit":130,
+			"vest":85,
+			"trousers":68,
+			"skirt":68,
+			"t_shirt":50
 		}
 
 		var freight=0;
