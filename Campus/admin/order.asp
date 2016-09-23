@@ -57,7 +57,8 @@ end if
       <div class="content-padded">
       姓名：<%=rs("username")%> <br>
       电话：<%=rs("mobile")%> <br>
-      地址：<%=rs("addr")%> <br>
+      地址：<%=rs("addr")%> <br>      
+      校区：<%=rs("school")%> <br>
       性别：<%if rs("sex") then response.write "男" else response.write "女" end if%> <br>
       型号：<%=rs("typeno")%> <br>
       衣服：<br>
@@ -98,7 +99,7 @@ end if
       <ul class="weui_media_info">
         <li class="weui_media_info_meta">订购时间：<%=rs("addtime")%></li>
         <li class="weui_media_info_meta"></li>
-        <li class="weui_media_info_meta weui_media_info_meta_extra">其它信息</li>
+        <li class="weui_media_info_meta weui_media_info_meta_extra">订单处理时间：<%=rs("lastmodifytime")%></li>
       </ul>
     </div>
 

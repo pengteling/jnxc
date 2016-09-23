@@ -7,7 +7,8 @@ end if
 
 id=request("id")
 act=request("act")
-result =Easp.Db.Query("update orderlist set flag={act} where id={id}")
+easp.var("nowtime")=now()
+result =Easp.Db.Query("update orderlist set flag={act} , lastmodifytime={nowtime} where id={id}")
 if result then
 	response.write "1"
 else

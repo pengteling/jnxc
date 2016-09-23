@@ -84,16 +84,16 @@ end sub
 sub index()
 
 %>
-<div class="weui_panel_hd"><a href="index.asp" class="weui_btn weui_btn_mini weui_btn_primary">所有订单</a> <a href="index.asp?flag=0" class="weui_btn weui_btn_mini weui_btn_primary">未确认付款</a> <a href="index.asp?flag=1" class="weui_btn weui_btn_mini weui_btn_primary">已付款未发货</a> <a href="index.asp?flag=2" class="weui_btn weui_btn_mini weui_btn_primary">已发货</a></div>
+<div class="weui_panel_hd"><a href="index.asp?flag=0" class="weui_btn weui_btn_mini weui_btn_primary">未确认付款</a> <a href="index.asp?flag=1" class="weui_btn weui_btn_mini weui_btn_primary">已付款未发货</a> <a href="index.asp?flag=2" class="weui_btn weui_btn_mini weui_btn_primary">已发货</a> <a href="index.asp?flag=all" class="weui_btn weui_btn_mini weui_btn_primary">所有订单</a></div>
 <div class="weui_cells weui_cells_access">
 
 <%
 Easp.Db.PageParam = "page"
 'Easp.Var("page") = 2
 Easp.Db.PageSize = 20
-
+if Easp.Var("flag")="" then Easp.Var("flag")=0
 'Easp.Var("flah") = "%{=key}%"
-if Easp.Var("flag")<>"" then
+if Easp.Var("flag")<>"all" then
 Set rs = Easp.Db.GetRS("select * from orderlist  where isdel=0 and flag={flag} order by id desc ")
 else
 Set rs = Easp.Db.GetRS("select * from orderlist  where isdel=0 order by id desc ")

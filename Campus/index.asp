@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<%Response.Expires = -1
+Response.ExpiresAbsolute = Now() - 1
+Response.cachecontrol = "no-cache"
+%><!DOCTYPE html>
 <html lang="zh-cn">
 <head>
 	<meta charset="UTF-8">
@@ -39,9 +42,10 @@
 
 	<div class="weui_cell_bd weui_cell_primary">
       <select class="weui_select" name="school" id="school">
-        <option selected="" value="">请选择学校或校区</option>
-        <option value="巴蜀本部/鲁能巴蜀 初中部">巴蜀本部/鲁能巴蜀 初中部</option>
-        <option value="巴蜀本部/鲁能巴蜀 高中部">巴蜀本部/鲁能巴蜀 高中部</option>        
+        <option selected="" value="">请选择学校或校区</option>        
+        <option value="巴蜀本部高中部">巴蜀本部高中部</option> 
+        <option value="鲁能巴蜀初中部">巴蜀鲁能校区初中部</option>
+        <option value="鲁能巴蜀高中部">巴蜀鲁能校区高中部</option>       
         <option value="涪陵巴蜀">涪陵巴蜀</option>
       <!--   <option value="奉节巴蜀">奉节巴蜀</option>
       <option value="大学城一小">大学城一小</option>
@@ -138,7 +142,7 @@
   <div class="weui_cell">
     <div class="weui_cell_hd"><label class="weui_label">姓名</label></div>
     <div class="weui_cell_bd weui_cell_primary">
-      <input class="weui_input" type="tel" placeholder="收货人姓名" name="username" id="username">
+      <input class="weui_input" type="text" placeholder="收货人姓名" name="username" id="username">
     </div>
   </div>
 
@@ -161,7 +165,7 @@
       
     </div>
   </div>
-  <div class="weui_cells_title">你需要付款： ￥<span id="pay">0</span>元。如对金额有疑问，请咨询工作人员15320890416 殷's。</div> 
+  <div class="weui_cells_title">你需要付款： ￥<span id="pay">0</span>元（含运费<span id="pay_freight"></span>）。如对金额有疑问，请咨询工作人员15320890416 殷's。</div> 
   <!-- <div>
   	<img src="images/campus/pay.png" style="width:20em" alt="">
   </div> -->
@@ -197,7 +201,7 @@
     </div>
   </div>
 </div>
-
+<!-- <div id="dginfo"></div> -->
 <div  class="weui_cells_title">
 <a href="javascript:;" class="weui_btn weui_btn_primary" id="submit">确定</a>
 </div>
@@ -225,7 +229,7 @@
   <div class="weui_icon_area"><i class="weui_icon_success weui_icon_msg"></i></div>
   <div class="weui_text_area">
     <h2 class="weui_msg_title">订购成功</h2>
-    
+    <div id="dginfo"></div>
     <div class="weui_cells_title">你需要付款： ￥<span id="pay2"></span>元。如对金额有疑问，请咨询工作人员15320890416 殷's。</div> 
   <div>
   <p class="weui_msg_desc">请长按下面二维码在弹出菜单中点击识别图片中的二维码然后给我转账（或者加微信号15320890416），转账成功后我们会安排尽快发货，请您耐心等待！</p>
@@ -270,6 +274,15 @@
 			"skirt":68,
 			"t_shirt":50
 		}
+    var weights={
+      "sport":1.5,
+      "shirt":0.3,
+      "suit":0.8,
+      "vest":0.4,
+      "trousers":0.4,
+      "skirt":0.3,
+      "t_shirt":0.2
+    }
 
 		var freight=0;
 		function payall(){
@@ -285,22 +298,34 @@
 				//运费到付，
 				freight =0;
 			}else{
-				if(sport_num>1){
-					freight=13;
-				}
-				else
-				{
-					freight=11;
-				}
+				
+					freight=11+parseInt((sport_num*weights.sport + shirt_num*weights.shirt + t_shirt_num*weights.t_shirt + suit_num*weights.suit + vest_num*weights.vest + skirt_num*weights.skirt + trousers_num*weights.trousers)/2)*2;
+				
 			}				
 
 			//console.log(sport_num);
 			return sport_num*prices.sport + shirt_num*prices.shirt + t_shirt_num*prices.t_shirt + suit_num*prices.suit + vest_num*prices.vest + skirt_num*prices.skirt + trousers_num*prices.trousers + freight;
 		}
+    function dginfoShow(){
+        var dginfo = ""+$("#school").val();
+        dginfo+=$("#sex").val()==1?"男":"女";
+          dginfo+=""+$("#typeno").val();
+          dginfo+="&nbsp;"+($("#sport").val()>0?$("#sport option:selected").text():"");
+          dginfo+="&nbsp;"+($("#shirt").val()>0?$("#shirt option:selected").text():"");
+          dginfo+="&nbsp;"+($("#suit").val()>0?$("#suit option:selected").text():"");
+          dginfo+="&nbsp;"+($("#vest").val()>0?$("#vest option:selected").text():"");
+          dginfo+="&nbsp;"+($("#t_shirt").val()>0?$("#t_shirt option:selected").text():"");
+          dginfo+="&nbsp;"+($("#skirt").val()>0?$("#skirt option:selected").text():"");
+          dginfo+="&nbsp;"+($("#trousers").val()>0?$("#trousers option:selected").text():"");
+
+          $("#dginfo").html("您的订购信息："+dginfo);
+        }
 
 		$("select,#freight").on("change",function(){
 			$("#pay").text(payall());
 			$("#pay2").text(payall());
+      $("#pay_freight").text(freight);
+      //dginfoShow();
 		});
 
 
@@ -365,6 +390,7 @@
 					$("html,body").animate({scrollTop: 0}, 100);
 					$(".weui_cells_form").fadeOut();
 					$(".weui_msg").fadeIn();
+          dginfoShow();
 
 					$.hideLoading();
 					console.log("提交成功");
