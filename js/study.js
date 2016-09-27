@@ -17,7 +17,7 @@ function gasp() {
             opacity: [1, 0]
         }, {
             duration: 1800,
-            easing: 'easeOutQuad',
+            easing: 'easeOutQuad'
         //sequenceQueue: false,
         //loop: true
         })
@@ -26,13 +26,13 @@ function gasp() {
                 opacity: 0,
                 scale: 0.3
             }, {
-                duration: 1500,
+                duration: 1500
             // complete: function() {
             //     gasp(); //调用自身实现无限循环？
             // }
             //loop: true
-            })
-        ;
+            });
+
     }
 }
 
@@ -41,11 +41,13 @@ function gasp() {
 
 require("./jqueryAddress/jquery.address-1.6.js");
 $(function() {
+$.address.strict(false); // 地址栏里面 / 
 $.address.change(function(event) {
     // do something depending on the event.value property, e.g.  
     // $('#content').load(event.value + '.xml');  
     //alert("#erer");
     console.log(event.path);
+    console.log(event.path == "abc");
     console.log(event.queryString);
 
 });
@@ -55,14 +57,14 @@ $('a').click(function() {
 });
 
 //superscrollorama
-require("./TweenMax/tweenmax.min.js");
-require("./superscrollorama/jquery.superscrollorama.js");
-$(function() {
-var controller = $.superscrollorama({
-    triggerAtCenter: false,
-    playoutAnimations: true,
-    reverse: true //为0
-});
+// require("./TweenMax/tweenmax.min.js");
+// require("./superscrollorama/jquery.superscrollorama.js");
+// $(function() {
+// var controller = $.superscrollorama({
+//     triggerAtCenter: false,
+//     playoutAnimations: true,
+//     reverse: true //为0
+// });
 // controller.addTween(
 //     $(".box2"),
 //     // TweenMax.fromTo($(".box2 h3"), 1,
@@ -119,38 +121,38 @@ var controller = $.superscrollorama({
 
 // );
 
-controller.pin(".box3",300,{
-	anim: (new TimelineMax())
-        .append([
-            TweenMax.fromTo($('.box3 h3'), 1,
-                {
-                    css: {
-                        y: 000
-                    },
-                    immediateRender: true
-                },
-                {
-                    css: {
-                        y: 300
-                    }
-                }),
-            TweenMax.fromTo($('.box3 h3'), 1,
-                {
-                    css: {
-                        x: 200
-                    },
-                    immediateRender: true
-                },
-                {
-                    css: {
-                        x: 600
-                    }
-                })
-        ])
-}
-    
-)
-});
+// controller.pin(".box3",300,{
+//  anim: (new TimelineMax())
+//         .append([
+//             TweenMax.fromTo($('.box3 h3'), 1,
+//                 {
+//                     css: {
+//                         y: 000
+//                     },
+//                     immediateRender: true
+//                 },
+//                 {
+//                     css: {
+//                         y: 300
+//                     }
+//                 }),
+//             TweenMax.fromTo($('.box3 h3'), 1,
+//                 {
+//                     css: {
+//                         x: 200
+//                     },
+//                     immediateRender: true
+//                 },
+//                 {
+//                     css: {
+//                         x: 600
+//                     }
+//                 })
+//         ])
+// }
+
+// )
+// });
 // $(function() {
 // $(".box")
 //     .velocity({

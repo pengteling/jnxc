@@ -27,14 +27,14 @@ module.exports = {
         //carmel: ['./js/carmel.js']
         //fy6: ['./js/fy6.js']
         // mkylogin: ['./js/mkylogin.js']
-        //study: ['./js/study.js']
-        campus: ['./js/campus.js']
+        yfh: ['./js/yfh.js']
+    //campus: ['./js/campus.js']
     // ,
     // custom: ['./js/custom.js'],
     },
     output: {
-        path: './campus/',
-        publicPath: '/campus/', //调试时
+        path: './yfh/',
+        publicPath: '/yfh/', //调试时
         //publicPath: './../', //发布时
         filename: './js/[name].js'
     },
