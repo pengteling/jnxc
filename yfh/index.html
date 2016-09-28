@@ -8,7 +8,7 @@
   	<link rel="stylesheet" href="css/yfh.css">
 </head>
 <body>
-
+<div class="pop_mask"></div>
 	<!-- ajax容器 -->
 	<div class="ajax_wrap"> <!-- 整个ajax页面 -->
 		<section class="sec" id="sec0">  <!-- 页面中的场景 section -->
@@ -34,11 +34,99 @@
                 
 			</div>
 
+			<!-- 光晕 -->
+			<div class="light" id="light1"> <img src="images/l1.png" > </div>
+			<div class="light" id="light2">
+				<img src="images/l2.png" >
+				<img src="images/l3.png" class="light" id="light3">
+				<img src="images/l4.png" class="light" id="light4">
+				<img src="images/l5.png" class="light" id="light5">
+				<img src="images/l5.png" class="light" id="light6">
+			 </div>
+
+			<a href="#" class="skip ct">跳过动画</a>
+
+
 
 
 
 		</section>
 	</div>
+
+
+	<!-- 导航条 -->
+	
+	<div class="nav_mask"></div>
+	<a href="javascript:;" class="btn_nav"><span class="arr arr_up"></span></a>
+	<nav class="main">
+	
+		<a href="#yfh?sec=0" id="a0"> <div><i></i></div>  <h2>云 峰 湖</h2></a>
+		<a href="#holiday?sec=0" id="a1"> <div><i></i></div>  <h2>住　假</h2></a>
+		<a href="#experience?sec=0" id="a2"> <div><i></i></div>  <h2>体　验</h2></a>
+		<a href="#plan" id="a3"> <div><i></i></div>  <h2>规　划</h2></a>
+		<a href="#operate?sec=0" id="a4"> <div><i></i></div>  <h2>运　营</h2></a>
+		<a href="#invest?sec=0" id="a5"> <div><i></i></div>  <h2>招　商</h2></a>
+	</nav>
+	<!-- 导航部分完 -->
+
+	<footer class="foot">
+		<table class="foot_fl">
+			<tr>
+				<td><i class="phone">86 0731-28272530</i></td>
+				<td class="cut"></td>
+				<td><div class="addr">项目地址：湖南株洲云龙新城 云峰大道云峰湖社区</div></td>
+				<td class="cut"></td>
+				<td><a href="#" class="guide" data-pop="pop_guide">地图导航</a></td>
+			</tr>
+		</table>
+
+		<table class="foot_fr">
+			<tr>
+				
+				
+				<td><a href="#cover" class="home">返回首页</a></td>
+				<td class="cut"></td>
+				<td><a href="http://weibo.com" target="_blank" class="i_sina"></a></td>
+				<td><a href="#" class="i_weixin"></a></td>
+				<td class="cut"></td>
+				<td><a href="#" class="mz" data-pop="pop_note">免责声明</a></td>
+				<td>
+					<select name="links" onchange="window.open( options[selectedIndex].value,'_blank' );">
+						<option value="javascript:;">网站链接</option>
+					</select>
+				</td>
+				<td class="cut"></td>
+                                <td><div id="music"><input type="hidden" id='musicsource' value="images/music.mp3"></div></td>
+			</tr>
+		</table>
+
+		<img src="images/ewm.png" id="ewm">
+		
+	</footer>
+
+
+
+	<div class="pop pop_join" id="pop_guide">
+		<div class="pop_tit">地图导航</div>
+		<div class="pop_con">
+		<!-- <iframe width="640" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://api.map.baidu.com/mapCard/finish.html?location=%E6%B9%96%E5%8D%97%E7%9C%81%7C%E6%A0%AA%E6%B4%B2%E5%B8%82%7C%7C%E4%BA%91%E5%B3%B0%E5%A4%A7%E9%81%93%E4%BA%91%E5%B3%B0%E6%B9%96%E7%A4%BE%E5%8C%BA&information=%E4%BA%91%E5%B3%B0%E6%B9%96%E5%9B%BD%E9%99%85%E6%97%85%E6%B8%B8%E5%BA%A6%E5%81%87%E5%8C%BA%7C0731-28272530%7C%7C%7C&point=[113.233136,27.999293]&width=636&height=350&basicInformation=false&route=false&searchBox=true&zoom=12"></iframe> -->
+		</div>
+		<button class="btn_close"></button>
+	</div>
+
+	<div class="pop pop_join" id="pop_note">
+		<div class="pop_tit">免责声明</div>
+		<div class="pop_con">
+			<p>1、任何人因使用本网站而可能遭致的意外及其造成的损失（包括因下载本网站可能链接的第三方网站内容而感染电脑病毒），我们对此概不负责，亦不承担任何法律责任。</p>
+			<p>2、本网站禁止制作、复制、发布、传播等具有反动、色情、暴力、淫秽等内容的信息，一经发现，立即删除。若您因此触犯法律，我们对此不承担任何法律责任。</p>
+			<p>3、本网站会员自行上传或通过网络收集的资源，我们仅提供一个展示、交流的平台，不对其内容的准确性、真实性、正当性、合法性负责，也不承担任何法律责任。</p>
+			<p>4、任何单位或个人认为通过本网站网页内容可能涉嫌侵犯其著作权，应该及时向我们提出书面权利通知，并提供身份证明、权属证明及详细侵权情况证明。我们收到上述法律文件后，将会依法尽快处理。</p>
+		</div>
+		<button class="btn_close"></button>
+	</div>
+	
+
+
 
 
 
