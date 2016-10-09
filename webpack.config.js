@@ -18,6 +18,7 @@ module.exports = {
             //     __dirname,
             //     'bower_components/flexslider/jquery.flexslider-min'
             // )
+            vue: 'vue/dist/vue.js'
         }
     },
     entry:
@@ -28,15 +29,16 @@ module.exports = {
         //fy6: ['./js/fy6.js']
         // mkylogin: ['./js/mkylogin.js']
         //yfh: ['./js/yfh.js']
-        fy8: ['./js/fy8.js']
+        //fy8: ['./js/fy8.js']
+        vue: ['./js/vue.js']
     //campus: ['./js/campus.js']
     // ,
     // custom: ['./js/custom.js'],
     },
     output: {
         path: './fy8/',
-        //publicPath: '/fy8/', //调试时
-        publicPath: './../', //发布时
+        publicPath: '/vue/', //调试时
+        //publicPath: './../', //发布时
         filename: './js/[name].js'
     },
 
