@@ -1,0 +1,240 @@
+@charset 'utf-8';
+/*  gem install compass-normalize  */
+@import "normalize","mixin","comm";
+@include normalize();
+
+html,body{
+	height:100%;
+	overflow-x:hidden;
+}
+body{	
+	font-family: "Arial","Microsoft YaHei", "SimHei", "SimSun";		
+	max-width:1920px;
+	margin:0 auto;
+}
+
+.im1{
+	height: 800px;
+	background:url(../images/fy9/im1-bg.jpg) top center no-repeat;	
+	.im1-logo{
+		@include abs(184px,66px,0px,38px,null,null,"../images/fy9/logo.png");
+		a{
+			@extend .block;
+		}
+	}
+	.im1-biaoyu{
+		@include abs(352px,90px,null,30px,0,null,"../images/fy9/im1-biaoyu.png");
+	}
+}
+.im2{
+	height:1147px;
+	.im2-tit{
+		@include abscenter(687px,81px,95px,"../images/fy9/im2-tit.png");
+	}
+	.im2-main{
+		@include abscenter(1103px,832px,237px,"../images/fy9/im2-main.png");
+		a{
+			@extend .block;
+		}
+	}
+}
+
+.im3{
+	height:719px;
+	.im3-tit{
+		@include abscenter(713px,58px,0px,"../images/fy9/im3-tit.png");
+	}
+	.im3-main{
+		@include abscenter(1110px,524px,106px,"../images/fy9/im3-main.png");
+		a{
+			@extend .block;
+		}
+	}
+}
+
+.im4{
+	height:2546px;
+	background:url(../images/fy9/im4-bg.jpg) top center no-repeat;	
+	.im4-tit{
+		@include abscenter(693px,85px,89px,"../images/fy9/im4-tit.png");
+	}
+	.im4-main{
+		@include abscenter(1100px,2070px,239px,"../images/fy9/im4-main.png");
+		a{
+			@extend .block;
+		}
+	}
+	.btn{
+		@include abscenter(361px,70px,2388px,"../images/fy9/im4-btn.png");
+		a{
+			@extend .block;
+		}
+	}
+}
+
+
+.im5{
+	height:906px;
+	.im5-tit{
+		@include abscenter(723px,154px,114px,"../images/fy9/im5-tit.png");
+	}
+	.im5-main{
+		@include abscenter(1108px,504px,340px,"../images/fy9/im5-main.png");
+		a{
+			@extend .block;
+		}
+	}
+}
+
+.im6{
+	height:644px;
+	background:url(../images/fy9/im6-bg.jpg) top center no-repeat;	
+	.im6-tit{
+		@include abscenter(207px,70px,58px,"../images/fy9/im6-tit.png");
+	}
+	.im6-main{
+		@include abscenter(1100px,352px,181px,"../images/fy9/im6-main.png");
+		a{
+			@extend .block;
+		}
+	}
+}
+
+.im7{
+	height:990px;
+	.im7-tit{
+		@include abscenter(926px,62px,88px,"../images/fy9/im7-tit.png");
+	}
+	.im7-main{
+		@include abscenter(1102px,770px,220px,"../images/fy9/im7-main.png");
+		a{
+			@extend .block;
+		}
+	}
+}
+
+.im8{
+	height:1317px;
+	background:url(../images/fy9/im8-bg.jpg) top center no-repeat;	
+	.im8-tit{
+		@include abscenter(632px,52px,81px,"../images/fy9/im8-tit.png");
+	}
+	.im8-main{
+		@include abscenter(1099px,1022px,186px,"../images/fy9/im8-main.png");
+		a{
+			@extend .block;
+		}
+	}
+}
+
+
+.im9{
+	height:1234px;
+	.im9-tit{
+		@include abscenter(836px,75px,98px,"../images/fy9/im9-tit.png");
+	}	
+	.im9-txt1{
+		@include abscenter(1920px,200px,246px,"../images/fy9/im9-txt1.jpg");
+		a{
+			@extend .block;
+		}
+	}
+	.im9-txt2{
+		@include abscenter(1920px,200px,488px,"../images/fy9/im9-txt2.jpg");
+		a{
+			@extend .block;
+		}
+	}
+
+	.im9-txt3{
+		@include abscenter(1920px,200px,730px,"../images/fy9/im9-txt3.jpg");
+		a{
+			@extend .block;
+		}
+	}
+
+	.im9-txt4{
+		@include abscenter(1920px,200px,972px,"../images/fy9/im9-txt4.jpg");
+		a{
+			@extend .block;
+		}
+	}
+
+
+	
+}
+
+
+.im10{
+	height:956px;
+	background:url(../images/fy9/im10-bg.jpg) top center no-repeat;	
+	.im10-tit{
+		@include abscenter(1013px,67px,78px,"../images/fy9/im10-tit.png");
+	}
+	.im10-main{
+		@include abscenter(1102px,353px,202px,"../images/fy9/im10-main.png");
+		a{
+			@extend .block;
+		}
+	}
+	.foot{
+		@include abscenter(1101px,252px,656px,"../images/fy9/footer.png");
+	}
+}
+
+.neihead{
+	height:150px;
+	background:url(../images/fy9/nei-headbg.jpg) top center no-repeat;
+
+}
+.neimain{
+	
+	height:90px;
+	.hd a{
+		display: inline-block;
+		text-align: center;
+		width:126px;
+		height: 90px;
+		font-size: 22px;
+		line-height: 90px;
+		color: #6b6b6b;
+		&.on{
+			color: #3e3d3d;
+			background:#cbbbfd;
+		}
+	}
+	.hd{
+		margin:14px auto 12px;
+	}
+	.bd{
+		.con{
+			width:1100px;
+			position: relative;
+			.btn{
+				
+				position: absolute;
+				width:150px;
+				height: 54px;
+				bottom:385px;
+				background:url(../images/fy9/nei-btn.png);
+				left:50%;
+				margin-left: -75px;
+				a{
+					@extend .block;
+				}
+			}
+		}
+		.con-1{
+			height: 3617px;
+			background:url(../images/fy9/nei-tabcon-1.jpg) top center no-repeat;
+		}
+		.con-2{
+			height: 4321px;
+			background:url(../images/fy9/nei-tabcon-2.jpg) top center no-repeat;
+		}
+		.con-3{
+			height: 3210px;
+			background:url(../images/fy9/nei-tabcon-3.jpg) top center no-repeat;
+		}
+	}
+}

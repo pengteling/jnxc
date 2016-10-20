@@ -18,7 +18,7 @@ module.exports = {
             //     __dirname,
             //     'bower_components/flexslider/jquery.flexslider-min'
             // )
-            vue: 'vue/dist/vue.js'
+            //vue: 'vue/dist/vue.js'
         }
     },
     entry:
@@ -30,15 +30,15 @@ module.exports = {
         // mkylogin: ['./js/mkylogin.js']
         //yfh: ['./js/yfh.js']
         //fy8: ['./js/fy8.js']
-        vue: ['./js/vue.js']
+        fy9: ['./js/fy9.js']
     //campus: ['./js/campus.js']
     // ,
     // custom: ['./js/custom.js'],
     },
     output: {
-        path: './fy8/',
-        publicPath: '/vue/', //调试时
-        //publicPath: './../', //发布时
+        path: './fy9/',
+        //publicPath: '/fy9/', //调试时
+        publicPath: './../', //发布时
         filename: './js/[name].js'
     },
 
@@ -106,7 +106,7 @@ module.exports = {
             allChunks: true
         }),
         new HtmlWebpackPlugin({ // Also generate a test.html
-            filename: 'test.html',
+            filename: 'fy9.html',
             template: 'index.html'
         }),
         //jquery插件 
