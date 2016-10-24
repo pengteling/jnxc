@@ -1,0 +1,220 @@
+@charset 'utf-8';
+/*  gem install compass-normalize  */
+@import "normalize","mixin","comm";
+@include normalize();
+
+html,body{
+	height:100%;
+	overflow-x:hidden;
+}
+.im1{
+	height:700px;
+	background:url(../images/fy10/im1-bg.jpg) top center no-repeat;	
+	.im1-txt{
+		@include abscenter(778px,284px,150px,"../images/fy10/im1-txt.png");
+	}
+	.im1-btn{
+		@include abscenter(198px,55px,576px,"../images/fy10/im1-btn.png");
+		a{
+			@extend .block;
+		}
+	}
+}
+
+.im2{
+	height:894px;
+	.im2-tit{
+		@include abscenter(635px,57px,62px,"../images/fy10/im2-tit.png");
+	}
+	.im2-main{
+		@include abscenter(1006px,495px,164px,"../images/fy10/im2-main.png");
+		a{
+			@extend .block;
+		}
+	}
+
+	.im2-btn{
+		@include abscenter(422px,66px,737px,"../images/fy10/im2-btn.png");
+		a{
+			@extend .block;
+		}
+	}
+}
+
+.im3{
+	height:772px;
+	background:url(../images/fy10/im3-bg.jpg) top center no-repeat;	
+	.im3-tit{
+		@include abscenter(646px,48px,46px,"../images/fy10/im3-tit.png");
+	}
+	.im3-main{
+		@include abscenter(1003px,440px,134px,"../images/fy10/im3-main.png");
+		a{
+			@extend .block;
+		}
+	}
+
+	.im3-btn{
+		@include abscenter(222px,58px,644px,"../images/fy10/im3-btn.png");
+		a{
+			@extend .block;
+		}
+	}
+}
+
+.im4{
+	height:894px;
+	.im4-tit{
+		@include abscenter(778px,58px,74px,"../images/fy10/im4-tit.png");
+	}
+	.im4-main{
+		@include abscenter(1003px,663px,203px,"../images/fy10/im4-main.png");
+		a{
+			@extend .block;
+		}
+	}
+	
+}
+
+
+.im5{
+	height:803px;
+	background:#3feaad;
+	.im5-tit{
+		@include abscenter(657px,71px,66px,"../images/fy10/im5-tit.png");
+	}
+	.im5-main{
+		@include abscenter(1309px,568px,170px,"../images/fy10/im5-main.png");
+		a{
+			@extend .block;
+		}
+	}
+	
+}
+.im6{
+	height:1298px;
+	.im6-tit{
+		@include abscenter(731px,74px,84px,"../images/fy10/im6-tit.png");
+	}
+	.im6-main1{
+		@include abscenter(1002px,250px,292px,"../images/fy10/im6-main1.png");
+		a{
+			@extend .block;
+		}
+	}
+	.im6-main2{
+		@include abscenter(1002px,250px,631px,"../images/fy10/im6-main2.png");
+		a{
+			@extend .block;
+		}
+	}
+	.im6-main3{
+		@include abscenter(1002px,250px,983px,"../images/fy10/im6-main3.png");
+		a{
+			@extend .block;
+		}
+	}
+
+}
+
+.im7{
+	height:714px;
+	background:#ebf1f0;
+	.im7-tit{
+		@include abscenter(928px,139px,72px,"../images/fy10/im7-tit.png");
+	}
+	.im7-main{
+		@include abscenter(929px,297px,235px,"../images/fy10/im7-main.png");
+		a{
+			@extend .block;
+		}
+	}
+	.im7-btn{
+		@include abscenter(300px,58px,575px,"../images/fy10/im7-btn.png");
+		a{
+			@extend .block;
+		}
+	}
+	
+}
+.im8{
+	height:1015px;	
+	.im8-tit{
+		@include abscenter(852px,56px,84px,"../images/fy10/im8-tit.png");
+	}
+	.im8-main{
+		@include abscenter(1158px,715px,237px,"../images/fy10/im8-main.jpg");
+		a{
+			@extend .block;
+		}
+	}
+	
+
+}
+
+.im9{
+	height:800px;
+	background:#ebf1f0;
+	.im9-tit{
+		@include abscenter(765px,48px,65px,"../images/fy10/im9-tit.png");
+	}
+	.im9-main{
+		@include abscenter(1000px,469px,200px,"../images/fy10/im9-main.jpg");
+		a{
+			@extend .block;
+		}
+	}
+	.im9-btn{
+		@include abscenter(280px,58px,741px,"../images/fy10/im9-btn.png");
+		a{
+			@extend .block;
+		}
+	}
+	
+}
+.im10{
+	height:612px;
+	background:#ebf1f0;
+	.im10-tit{
+		@include abscenter(556px,48px,76px,"../images/fy10/im10-tit.png");
+	}
+	.im10-main{
+		@include abscenter(1002px,317px,212px,"../images/fy10/im10-main.png");
+		a{
+			@extend .block;
+		}
+	}
+}
+
+.im11{
+	height:491px;
+	background:url(../images/fy10/im11-bg.jpg) top center no-repeat;	
+	.im11-main{		
+		@include abscenter(1001px,393px,68px,"../images/fy10/im11-main.png");
+		div{
+			width:68px;
+			height: 60px;
+			position: absolute;
+			top: 140px;
+			a{
+				@extend .block;
+			}
+			&.weixin{
+				left: 411px;
+				
+			}
+			&.qq{
+				left: 520px;
+				
+			}
+			&.weibo{
+				left: 630px;
+				
+			}
+			&.fy{
+				left: 740px;
+				
+			}
+		}
+	}
+}
