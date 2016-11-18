@@ -1,0 +1,154 @@
+@charset 'utf-8';
+/*  gem install compass-normalize  */
+@import "normalize","mixin","comm";
+@include normalize();
+
+html,body{
+	height:100%;
+	overflow-x:hidden;
+}
+.im1{
+	height:600px;
+	background:url(../images/fy11/im1.png) top center no-repeat;	
+	.btn{
+		@include abscenter(235px,70px,459px);
+		a{
+			@extend .block;
+		}
+	}
+	
+}
+.im2{
+	height:454px;
+	background:url(../images/fy11/im2.png) top center no-repeat;
+	.mb{
+		height: 454px;
+		a{
+			@extend .block;
+		}
+	}	
+}
+
+.im3{
+	height:532px;
+	background:url(../images/fy11/im3.png) top center no-repeat;
+	.mb{
+		height: 100%;
+		a{
+			@extend .block;
+		}
+	}	
+}
+
+.im4{
+	height:532px;
+	background:url(../images/fy11/im4.jpg) top center no-repeat;
+	.mb{
+		height: 100%;
+		a{
+			@extend .block;
+		}
+	}	
+}
+.im5{
+	height:406px;
+	background:url(../images/fy11/im5.jpg) top center no-repeat;
+	.mb{
+		height: 100%;
+		a{
+			@extend .block;
+		}
+	}	
+}
+
+.im6{
+	height:690px;
+	background:url(../images/fy11/im6.jpg) top center no-repeat;
+	.mb{
+		height: 100%;
+		a{
+			@extend .block;
+		}
+	}	
+}
+
+.im7{
+	height:695px;
+	background:url(../images/fy11/im7.jpg) top center no-repeat;
+	.mb{
+		height: 100%;
+		a{
+			@extend .block;
+		}
+	}	
+}
+
+.im8{
+	height:618px;
+	background:url(../images/fy11/im8.jpg) top center no-repeat;
+	.mb{
+		height: 100%;
+		a{
+			@extend .block;
+		}
+	}	
+}
+
+
+.im9{
+	height:637px;
+	background:url(../images/fy11/im9.jpg) top center no-repeat;
+	.mb{
+		height: 100%;
+		a{
+			@extend .block;
+		}
+	}	
+}
+
+.im10{
+	height:675px;
+	background:url(../images/fy11/im10.jpg) top center no-repeat;
+	.mb{
+		height: 100%;
+		a{
+			@extend .block;
+		}
+	}	
+}
+
+.im11{
+	height:615px;
+	background:url(../images/fy11/im11.jpg) top center no-repeat;
+	.mb{
+		height: 100%;
+		a{
+			@extend .block;
+		}
+	}	
+}
+
+
+
+.im12{
+	height:681px;
+	background:url(../images/fy11/im12.jpg) top center no-repeat;
+	.mb{
+		height: 100%;
+		a{
+			@extend .block;
+		}
+	}	
+}
+
+
+.im13{
+	height:195px;
+	background:url(../images/fy11/im13.jpg) top center no-repeat;
+	.mb{
+		height: 100%;
+		a{
+			@extend .block;
+		}
+	}	
+}
