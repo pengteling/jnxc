@@ -30,14 +30,14 @@ module.exports = {
         // mkylogin: ['./js/mkylogin.js']
         //yfh: ['./js/yfh.js']
         //fy8: ['./js/fy8.js']
-        fy11: ['./js/fy11.js']
+        fy12: ['./js/fy12.js']
     //campus: ['./js/campus.js']
     // ,
     // custom: ['./js/custom.js'],
     },
     output: {
-        path: './fy11/',
-        //publicPath: '/fy11/', //调试时
+        path: './fy12/',
+        //publicPath: '/fy12/', //调试时
         publicPath: './../', //发布时
         filename: './js/[name].js'
     },

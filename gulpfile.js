@@ -4,7 +4,7 @@ var imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'); //imagemin-pngquant 最新版本会报错 安装时后加@4   npm i imagemin-pngquant@4
 
 gulp.task('image', function() {
-    gulp.src('./images/fy11/*.{png,jpg,gif,ico,svg}')
+    gulp.src('./images/fy12/*.{png,jpg,gif,ico,svg}')
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{
@@ -12,7 +12,7 @@ gulp.task('image', function() {
             }], //不要移除svg的viewbox属性
             use: [pngquant()] //使用pngquant深度压缩png图片的imagemin插件
         }))
-        .pipe(gulp.dest('fy11/images'));
+        .pipe(gulp.dest('fy12/images'));
 });
 
 // var htmlmin = require('gulp-htmlmin'); //压缩html
