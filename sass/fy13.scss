@@ -1,0 +1,150 @@
+@charset 'utf-8';
+/*  gem install compass-normalize  */
+@import "normalize","mixin","comm";
+@include normalize();
+
+html,body{
+	height:100%;
+	overflow-x:hidden;
+}
+.im1{
+	height:120px;
+	background:url(../images/fy13/im1.png) top center no-repeat;		
+	.logo{
+		@include abs(180px,74px,0,23px);
+		a{
+			@extend .block;
+		}
+	}
+	.tel{
+		@include abs(260px,74px,null,23px,0px);
+		a{
+			@extend .block;
+		}
+	}
+}
+.im2{
+	height:681px;
+	background:url(../images/fy13/im2.jpg) top center no-repeat;
+	a{
+		@extend .block;
+	}
+}
+.im3{
+	height:1183px;
+	background:url(../images/fy13/im3.jpg) top center no-repeat;
+	a{
+		@extend .block;
+	}
+}
+
+.im4{
+	height:1439px;
+	background:url(../images/fy13/im4.jpg) top center no-repeat;
+	.btn{
+		@include abs(356px,64px,312px,1141px);
+	}
+	a{
+		@extend .block;
+	}
+}
+.im5{
+	height:1149px;
+	background:url(../images/fy13/im5.jpg) top center no-repeat;
+
+	.teachers{
+		@include abs(499px,800px,0px,214px);
+		.teacher{
+			width:499px;
+			height: 800px;
+		}
+		.teacher-1{
+			
+			background:url(../images/fy13/im5-person-1.png);
+		}
+		.teacher-2{
+			
+			background:url(../images/fy13/im5-person-2.png);
+		}
+		
+		.hd{
+			position:  absolute;
+			top: 760px;
+			left: 202px;
+			ul{
+				li{
+					box-sizing: border-box;
+					width:12px;
+					height: 12px;
+					border-radius:50%;
+					cursor:pointer;
+					border:#fff 1px solid;
+					font-size: 0;
+					float: left;
+					margin-right: 6px;
+					&.on{
+						background:#fff;
+					}
+				}
+			}
+		}
+
+	}
+}
+.im6{
+	height:318px;
+	background:url(../images/fy13/im6.png) top center no-repeat;
+}
+.im7{
+	height:415px;
+	background:url(../images/fy13/im7.jpg) top center no-repeat;
+	.pic{
+		@include abs(445px,267px,0px,46px);
+		a{
+			@extend .block;
+		}		
+	}
+	.btn{
+		position: absolute;
+		width:178px;
+		height: 46px;
+		a{
+			@extend .block;
+		}
+	}
+	.btn1{		
+		left: 520px;
+		top: 253px;
+	}
+	.btn2{		
+		left: 716px;
+		top: 253px;
+	}
+}
+.im8{
+	height:482px;
+	background:url(../images/fy13/im8.jpg) top center no-repeat;
+
+	.pic{
+		@include abs(445px,267px,null,46px,0);
+		a{
+			@extend .block;
+		}		
+	}
+	.btn{
+		position: absolute;
+		width:178px;
+		height: 46px;
+		a{
+			@extend .block;
+		}
+	}
+	.btn1{		
+		left: 48px;
+		top: 251px;
+	}
+	.btn2{		
+		left: 244px;
+		top: 253px;
+	}
+}
