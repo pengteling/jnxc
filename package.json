@@ -3,5 +3,8 @@
     "gulp-imagemin": "^3.0.3",
     "imagemin-pngquant": "^4.2.2",
     "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --inline-hot"
   }
 }

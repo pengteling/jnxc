@@ -1,0 +1,103 @@
+@charset 'utf-8';
+/*  gem install compass-normalize  */
+@import "normalize","mixin","comm";
+@include normalize();
+
+body{
+	@extend .yahei;	
+}
+.header{
+	height:58px;
+	background:#09ab6f;
+	.logo{
+		width:135px;
+		height: 53px;
+		background:url(../images/logo.png) no-repeat;
+		float: left;
+		margin-left: 28px;
+		margin-top: 2px;
+	}
+	.nav{
+		float: right;
+		a{
+			box-sizing:border-box;
+			display: inline-block;
+			height: 56px;
+			line-height: 56px;
+			font-size: 18px;
+			color:#fff;
+			margin-top: 1px;
+			margin-left: 74px;
+			&:hover{
+				border-bottom: #00e993 3px solid;
+			}
+			@extend .transition;
+
+		}
+	}
+}
+.im1{
+	position: relative;
+	height:883px;
+	background:url(../images/im1-bg.jpg) center top no-repeat;
+	.bigtit{
+		@include abscenter(822px,176px,240px,"../images/im1-bigtxt.png");
+	}
+	.btn{
+		@include abscenter(152px,48px,488px,"../images/im1-btn.png");
+		&:hover{
+			@extend .transition;
+			opacity: 0.5;
+			// -webkit-filter:invert(0.3);
+			//filter: hue-rotate(180deg) invert(0.4);
+		}
+	}
+	.tel{
+		@include abscenter(352px,42px,576px,"../images/im1-tel.png");
+	}
+	.arrow-down{
+		@include abs(54px,54px,null,null,84px,32px,"../images/im1-arrow-down.png");
+		cursor: pointer;
+	}
+}
+
+.im2{
+	position: relative;
+	z-index:3;
+	height:852px;
+	.bigtxt{
+		@include abscenter(837px,43px,154px,"../images/im2-bigtxt.png");
+	}
+	.txt{
+		@include abscenter(922px,71px,255px,"../images/im2-txt.png");
+	}
+	.btn{
+		@include abscenter(152px,48px,392px,"../images/im2-btn.png");
+	}
+	.pic{
+		@include abscenter(792px,343px,508px,"../images/im2-pic.jpg");
+	}
+}
+.im3{
+	height:733px;
+	background:url(../images/im3-bg.jpg);
+	.tit{
+		@include abscenter(764px,39px,110px,"../images/im3-tit.png");
+	}
+	.boxes{
+		@include abscenter(826px,374px,226px);
+		div a{
+			@extend .block;
+		}
+		.box-1{
+			@include abs(246px,373px,0,0,null,null,"../images/im3-box-1.png");
+		}
+		.box-2{
+			@include abs(296px,181px,258px,0,null,null,"../images/im3-box-2.png");
+		}
+	}
+	.arrow-down{
+		@include abscenter(64px,64px,701px,"../images/im3-arrow-down.png");
+		animation: gleamingly 10s infinite linear;
+	}
+}

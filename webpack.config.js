@@ -28,7 +28,7 @@ module.exports = {
         //carmel: ['./js/carmel.js']
         //fy6: ['./js/fy6.js']
         // mkylogin: ['./js/mkylogin.js']
-        yfh: ['./js/yfh.js']
+        fy2017: ['./js/fy2017.js']
         //fy8: ['./js/fy8.js']
         //fy13: ['./js/fy13.js']
     //campus: ['./js/campus.js']
@@ -36,8 +36,8 @@ module.exports = {
     // custom: ['./js/custom.js'],
     },
     output: {
-        //path: './fy13/',
-        publicPath: '/yfh/', //调试时
+        path: './fy2017/',
+        publicPath: '/fy2017/', //调试时
         //publicPath: './../', //发布时
         filename: './js/[name].js'
     },
@@ -106,8 +106,8 @@ module.exports = {
             allChunks: true
         }),
         new HtmlWebpackPlugin({ // Also generate a test.html
-            filename: 'fy9.html',
-            template: 'index.html'
+            filename: 'fy2017.html',
+            template: 'fy2017.html'
         }),
         //jquery插件 
         // new webpack.ProvidePlugin({
