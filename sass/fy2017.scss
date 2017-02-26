@@ -5,6 +5,7 @@
 
 body{
 	@extend .yahei;	
+	overflow-x: hidden;
 }
 .header{
 	height:58px;
@@ -79,8 +80,10 @@ body{
 	}
 }
 .im3{
+	position: relative;
+	z-index:5;
 	height:733px;
-	background:url(../images/im3-bg.jpg);
+	background:url(../images/im3-bg.jpg) center top no-repeat;
 	.tit{
 		@include abscenter(764px,39px,110px,"../images/im3-tit.png");
 	}
@@ -95,9 +98,156 @@ body{
 		.box-2{
 			@include abs(296px,181px,258px,0,null,null,"../images/im3-box-2.png");
 		}
+		.box-3{
+			@include abs(296px,181px,565px,0,null,null,"../images/im3-box-3.png");
+		}
+		.box-4{
+			@include abs(296px,181px,258px,192px,null,null,"../images/im3-box-4.png");
+		}
+		.box-5{
+			@include abs(296px,181px,565px,192px,null,null,"../images/im3-box-5.png");
+		}
 	}
 	.arrow-down{
 		@include abscenter(64px,64px,701px,"../images/im3-arrow-down.png");
 		animation: gleamingly 10s infinite linear;
+	}
+}
+.im4{
+	height:873px;
+	background:url(../images/im4-bg.jpg) center top no-repeat;
+	.tit{
+		@include abscenter(748px,39px,174px,"../images/im4-tit.png");
+	}
+	.container div{
+		width: 220px;
+		height: 343px;
+		float: left;
+		a{
+			@extend .block;
+		}
+	}
+	.container{
+		@include abscenter(1100px,343px,346px);
+		$i:1;
+		@while $i<6{
+			.item-#{$i}{
+				background:url(../images/im4-item-#{$i}.png);
+
+			}
+			$i:$i+1;
+		}
+	}
+}
+.im5{
+	height:800px;
+
+	background:url(../images/im5-bg.jpg) center top no-repeat;
+	border-bottom:#e7e7e9 1px solid;
+	.tit{
+		@include abscenter(758px,39px,129px,"../images/im5-tit.png");
+	}
+	.container{
+		div{
+			width: 275px;
+			height: 420px;
+			float: left;
+			a{
+				@extend .block;
+			}
+		}
+		@include abscenter(1100px,420px,252px);
+		$i:1;
+		@while $i<5{
+			.item-#{$i}{
+				background:url(../images/im5-item-#{$i}.png);
+
+			}
+			$i:$i+1;
+		}
+	}
+	.arrow-down{
+		// @include abscenter(64px,64px,768px,"../images/im3-arrow-down.png");
+		// animation: gleamingly 10s infinite linear;
+		 @include abscenter(1920px,75px,768px,"../images/im5-arrow-down.png");
+		 a{
+		 	@include abscenter(64px,64px,0px);
+
+		 }
+	}
+}
+.im6{
+	height:946px;
+	.tit{
+		@include abscenter(758px,39px,134px,"../images/im6-tit.png");
+	}
+	.container{
+		position: absolute;
+		width: 1200px;
+		height: 568px;
+		left: 0;
+		top: 277px;
+		div{
+			float: left;
+			width:250px;
+			height: 233px;
+			margin-right: 33px;
+			margin-bottom: 48px;
+			a{
+				@extend .block;
+			}
+		}
+
+		$i:1;
+		@while $i<9{
+			.item-#{$i}{
+				background:url(../images/im6-item-#{$i}.png);
+
+			}
+			$i:$i+1;
+		}
+	}
+}
+
+.im7{
+	height:940px;
+	background:url(../images/im7-bg.jpg) top center no-repeat;
+	.tit{
+		@include abscenter(543px,39px,98px,"../images/im7-tit.png");
+	}
+
+
+	.arrow-down{
+		@include abscenter(64px,64px,908px,"../images/im3-arrow-down.png");
+		animation: gleamingly 10s infinite linear;
+	}
+
+	.container{
+		position: absolute;
+		width: 1200px;
+		height: 620px;
+		left: 0;
+		top: 223px;
+		div{
+			float: left;
+			width:560px;
+			height: 268px;
+			margin-right: 23px;
+			margin-bottom: 27px;
+			a{
+				@extend .block;
+			}
+		}
+
+		$i:1;
+		@while $i<5{
+			.item-#{$i}{
+				background:url(../images/im7-item-#{$i}-intro.png) 201px 0 no-repeat;
+				a{
+					background:url(../images/im7-item-#{$i}-pic.jpg) 0px 0 no-repeat;
+				}
+			}
+			$i:$i+1;
+		}
 	}
 }
