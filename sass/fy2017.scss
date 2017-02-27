@@ -260,13 +260,129 @@ body{
 
 .im8{
 	height:832px;
+	border-bottom:rgba(#f8f8f8,0.2) 1px solid;
 	.tit{
 		@include abscenter(526px,39px,132px,"../images/im8-tit.png");
 	}
 	.sliders{
+		
 		@include abscenter(1100px,578px,238px);
-		ul li{
+		.hd{
+			position: absolute;
+			left: 50%;
+			margin-left: -20px;
+			bottom:38px;
+
+			ul li{
+				width: 8px;
+				height: 8px;
+				background:#b1b5c9;
+				border-radius: 50%;
+				float: left;
+				margin-right: 20px;
+				text-indent: -999px;
+				cursor: pointer;
+				&.on{
+					width: 12px;
+					height: 12px;
+					background: transparent;
+					box-shadow: 0px 0px 0px 2px #25a85a inset;
+					margin-top: -2px;
+					/* position: relative;
+					&::after{
+						position: absolute;
+						z-index: 2;
+						content: "";
+						width:8px;
+						height: 8px;
+						background: transparent;
+						border-radius: 50%;
+						left: 2px;
+						top: 2px;
+					} */
+				}
+			}
+		}
+		.bd ul li{
+			position: relative;
+			padding:288px 40px 0;
 			
+			.pic{
+				@include abscenter(249px,247px,0px,"../images/im9-stu-1.png");			
+				
+			}
+			&:last-child .pic{
+				background:url(../images/im9-stu-2.png);
+			}
+			.simple{
+				text-align: center;
+				a{
+					color:#fff;
+					font-size: 16px;
+					line-height:26px;
+				}
+			}
+			.content{
+				margin-top: 10px;
+				color:#b1b5c9;
+				line-height:24px;
+				font-size: 14px;
+			}
 		}
 	}
+}
+
+.im9{
+	height:596px;
+	.tit{
+		@include abscenter(528px,39px,114px,"../images/im10-tit.png");		
+	}
+	.i9-main{
+		@include abscenter(1065px,383px,216px,"../images/im10-main.png");		
+		a{
+			@extend .block;
+			float: left;
+			width:25%;
+			height: 50%;
+
+		}
+	}
+}
+.footer{
+	.tel-pic{
+		@include abscenter(100px,98px,120px,"../images/im10-tel.png");
+		a{
+					@extend .block;
+		}	
+	}
+	.tel{
+		@include abscenter(669px,29px,264px,"../images/im11-tit.png");	
+		a{
+					@extend .block;
+		}			
+	}
+	.copy{
+		@include abscenter(1053px,14px,382px,"../images/im11-copy.png");	
+		position: relative;
+		a{
+			position: absolute;
+			width:58px;
+			height: 14px;
+			direction: block;
+			&:last-child{
+				right:0px;
+				top: 0;
+			}
+			&:first-child{
+				right:90px;
+				top: 0
+			}
+
+		}	
+
+	}
+}
+
+.arrow-down a{
+	@extend .block;
 }
