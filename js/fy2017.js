@@ -11,3 +11,13 @@ require("./superslide/jquery.SuperSlide.2.1.2.js");
 require("./pJqueryAppearAnimateCSS3/jac.js"); //动画
 
 
+$(function(){
+	$(".sliders").slide({
+		titCell:".hd ul",
+		mainCell:".bd ul",
+		effect:"left",
+		autoPage:true,
+		autoPlay:true,
+		interTime:6000
+	});
+})

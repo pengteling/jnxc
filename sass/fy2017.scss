@@ -251,3 +251,22 @@ body{
 		}
 	}
 }
+
+.bigbg{
+	height:1918px;
+	background:url(../images/im9-bg.jpg) center top no-repeat;
+	
+}
+
+.im8{
+	height:832px;
+	.tit{
+		@include abscenter(526px,39px,132px,"../images/im8-tit.png");
+	}
+	.sliders{
+		@include abscenter(1100px,578px,238px);
+		ul li{
+			
+		}
+	}
+}
