@@ -17,6 +17,9 @@ body{
 		float: left;
 		margin-left: 28px;
 		margin-top: 2px;
+		a{
+			@extend .block;
+		}
 	}
 	.nav{
 		float: right;
@@ -32,7 +35,7 @@ body{
 			&:hover{
 				border-bottom: #00e993 3px solid;
 			}
-			@extend .transition;
+			/* @extend .transition; */
 
 		}
 	}
