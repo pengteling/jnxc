@@ -91,10 +91,28 @@ end if
 if rs("vest")>0 then 
   response.write "毛衣背心"&rs("vest")&"件<br>"
 end if
+if rs("tie")>0 then 
+  response.write "领带"&rs("tie")&"条<br>"
+end if
 
+if rs("belt")>0 then 
+  response.write "腰带"&rs("belt")&"条<br>"
+end if
       %> <br>
 
+状态：<%
+ Select Case rs("flag")
+		Case 0
+		Response.write "[未确认付款]"
+		Case 1
+		Response.write "[已确认付款未发货]"
+		Case 2 
+		Response.write "[已发货]"
+		Case 3
+		Response.write "[废单]"
+	  End select
 
+%>
       </div>
       <ul class="weui_media_info">
         <li class="weui_media_info_meta">订购时间：<%=rs("addtime")%></li>
@@ -108,6 +126,7 @@ end if
   <p class="weui_btn_area">
 <a href="javascript:;" id="confirmpay" class="weui_btn weui_btn_warn">确认付款</a>
   <a href="javascript:;" id="confirmok" class="weui_btn weui_btn_warn">已经发货</a>
+   <a href="javascript:;" id="confirmwrong" class="weui_btn weui_btn_warn">废单处理</a>
   </p>
   </div>
 </div>
@@ -169,6 +188,30 @@ set rs=nothing
   });
       
     });
+
+
+	$("#confirmwrong").click(function(){
+
+      $.confirm("确认废单？", function() {
+  //点击确认后的回调函数
+  $.post("do.asp",{
+        id:<%=id%>,
+        act:3
+      },function(data){
+        if(data==1){
+  $.toast("操作成功");
+        }
+        else{
+          $.toast("禁止操作", "forbidden");
+        }
+
+      })
+  }, function() {
+  //点击取消后的回调函数
+  });
+      
+    });
+
 		
 	})
 </script>

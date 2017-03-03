@@ -84,7 +84,7 @@ end sub
 sub index()
 
 %>
-<div class="weui_panel_hd"><a href="index.asp?flag=0" class="weui_btn weui_btn_mini weui_btn_primary">未确认付款</a> <a href="index.asp?flag=1" class="weui_btn weui_btn_mini weui_btn_primary">已付款未发货</a> <a href="index.asp?flag=2" class="weui_btn weui_btn_mini weui_btn_primary">已发货</a> <a href="index.asp?flag=all" class="weui_btn weui_btn_mini weui_btn_primary">所有订单</a></div>
+<div class="weui_panel_hd"><a href="index.asp?flag=0" class="weui_btn weui_btn_mini weui_btn_primary<%If (request("flag"))="0" Then Response.write " weui_btn_disabled weui_btn_warn" End if%>">未确认付款</a> <a href="index.asp?flag=1" class="weui_btn weui_btn_mini weui_btn_primary<%If (request("flag"))="1" Then Response.write " weui_btn_disabled weui_btn_warn" End if%>">已付款未发货</a> <a href="index.asp?flag=2" class="weui_btn weui_btn_mini weui_btn_primary<%If (request("flag"))="2" Then Response.write " weui_btn_disabled weui_btn_warn" End if%>">已发货</a> <a href="index.asp?flag=3" class="weui_btn weui_btn_mini weui_btn_primary<%If (request("flag"))="3" Then Response.write " weui_btn_disabled weui_btn_warn" End if%>">废单</a> <a href="index.asp?flag=all" class="weui_btn weui_btn_mini weui_btn_primary<%If (request("flag"))="all" Then Response.write " weui_btn_disabled weui_btn_warn" End if%>">所有订单</a></div>
 <div class="weui_cells weui_cells_access">
 
 <%
@@ -133,10 +133,29 @@ if rs("vest")>0 then
   response.write "毛衣背心"&rs("vest")&"件<br>"
 end if
 
+if rs("tie")>0 then 
+  response.write "领带"&rs("tie")&"条<br>"
+end if
+
+if rs("belt")>0 then 
+  response.write "腰带"&rs("belt")&"条<br>"
+end if
+
       %></p>
     </div>
     <div class="weui_cell_ft"><%
       response.write rs("username") &"" & rs("mobile")
+	  Select Case rs("flag")
+		Case 0
+		'Response.write "[未确认付款]"
+		Case 1
+		'Response.write "[已确认付款未发货]"
+		Case 2 
+		'Response.write "[已发货]"
+		Case 3
+		'Response.write "[废单]"
+	  End select
+
       %></div>
   </a>
   

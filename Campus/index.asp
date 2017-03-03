@@ -43,10 +43,12 @@ Response.cachecontrol = "no-cache"
 	<div class="weui_cell_bd weui_cell_primary">
       <select class="weui_select" name="school" id="school">
         <option selected="" value="">请选择学校或校区</option>        
-        <option value="巴蜀本部高中部">巴蜀本部高中部</option> 
-        <option value="鲁能巴蜀初中部">巴蜀鲁能校区初中部</option>
-        <option value="鲁能巴蜀高中部">巴蜀鲁能校区高中部</option>       
-        <option value="涪陵巴蜀">涪陵巴蜀</option>
+        <option value="巴蜀中学高2019级">巴蜀中学高2019级</option> 
+        <option value="巴蜀中学高2018级">巴蜀中学高2018级</option>
+        <option value="巴蜀中学高2017级">巴蜀中学高2017级</option>       
+        <option value="巴蜀中学初2019级">巴蜀中学初2019级</option>
+		 <option value="巴蜀中学初2018级">巴蜀中学初2018级</option>
+		  <option value="巴蜀中学初2017级">巴蜀中学初2017级</option>
       <!--   <option value="奉节巴蜀">奉节巴蜀</option>
       <option value="大学城一小">大学城一小</option>
       <option value="石新路小学">石新路小学</option> -->
@@ -133,6 +135,17 @@ Response.cachecontrol = "no-cache"
         <option value="2">毛衣背心2件</option>       
       </select>  
 
+      <select class="weui_select" name="tie" id="tie">
+        <option selected="" value="0">领带（每条 ￥5）</option>
+        <option value="1">领带1条</option>
+             
+      </select>  
+
+      <select class="weui_select" name="belt" id="belt">
+        <option selected="" value="0">腰带（每条 ￥10）</option>
+        <option value="1">腰带1条</option>
+               
+      </select>  
       
 
 		  
@@ -165,7 +178,7 @@ Response.cachecontrol = "no-cache"
       
     </div>
   </div>
-  <div class="weui_cells_title">你需要付款： ￥<span id="pay">0</span>元（含运费<span id="pay_freight"></span>）。如对金额有疑问，请咨询工作人员15320890416 殷's。</div> 
+  <div class="weui_cells_title">你需要付款： ￥<span id="pay">0</span>元（含运费<span id="pay_freight"></span>）。注：买齐全套赠送领带和腰带，如对系统自动计算的金额有疑问，请咨询工作人员15320890416 殷海霞。</div> 
   <!-- <div>
   	<img src="images/campus/pay.png" style="width:20em" alt="">
   </div> -->
@@ -196,7 +209,7 @@ Response.cachecontrol = "no-cache"
 <div class="weui_cells weui_cells_form">
   <div class="weui_cell">
     <div class="weui_cell_bd weui_cell_primary">
-      <textarea class="weui_textarea" placeholder="请输入您的详细收货地址" rows="3" id="addr" name="addr"></textarea>
+      <textarea class="weui_textarea" placeholder="请在这里输入您的详细收货地址，如遇个别衣服需要的型号不一致，也请在这里添加说明" rows="3" id="addr" name="addr"></textarea>
       <div class="weui_textarea_counter"><span>0</span>/200</div>
     </div>
   </div>
@@ -230,7 +243,7 @@ Response.cachecontrol = "no-cache"
   <div class="weui_text_area">
     <h2 class="weui_msg_title">订购成功</h2>
     <div id="dginfo"></div>
-    <div class="weui_cells_title">你需要付款： ￥<span id="pay2"></span>元。如对金额有疑问，请咨询工作人员15320890416 殷's。</div> 
+    <div class="weui_cells_title">你需要付款： ￥<span id="pay2"></span>元。如对金额有疑问，请咨询工作人员15320890416 殷海霞。</div> 
   <div>
   <p class="weui_msg_desc">请长按下面二维码在弹出菜单中点击识别图片中的二维码然后给我转账（或者加微信号15320890416），转账成功后我们会安排尽快发货，请您耐心等待！</p>
   	<img src="images/campus/pay.jpg" style="width:20em" alt="">
@@ -272,7 +285,9 @@ Response.cachecontrol = "no-cache"
 			"vest":85,
 			"trousers":68,
 			"skirt":68,
-			"t_shirt":50
+			"t_shirt":50,
+      "tie":5,
+      "belt":10
 		}
     var weights={
       "sport":1.5,
@@ -281,7 +296,9 @@ Response.cachecontrol = "no-cache"
       "vest":0.4,
       "trousers":0.4,
       "skirt":0.3,
-      "t_shirt":0.2
+      "t_shirt":0.2,
+      "tie":0.1,
+      "belt":0.1
     }
 
 		var freight=0;
@@ -293,18 +310,33 @@ Response.cachecontrol = "no-cache"
 			var trousers_num = $("#trousers").val();
 			var skirt_num = $("#skirt").val();
 			var t_shirt_num = $("#t_shirt").val();
+      var tie_num =$("#tie").val();
+      var belt_num =$("#belt").val();
 			
 			if($("#freight").is(':checked')){
 				//运费到付，
 				freight =0;
 			}else{
 				
-					freight=11+parseInt((sport_num*weights.sport + shirt_num*weights.shirt + t_shirt_num*weights.t_shirt + suit_num*weights.suit + vest_num*weights.vest + skirt_num*weights.skirt + trousers_num*weights.trousers)/2)*2;
+					freight=11+parseInt((sport_num*weights.sport + shirt_num*weights.shirt + t_shirt_num*weights.t_shirt + suit_num*weights.suit + vest_num*weights.vest + skirt_num*weights.skirt + trousers_num*weights.trousers + tie_num*weights.tie + belt_num*weights.belt)/2)*2;
 				
 			}				
 
 			//console.log(sport_num);
-			return sport_num*prices.sport + shirt_num*prices.shirt + t_shirt_num*prices.t_shirt + suit_num*prices.suit + vest_num*prices.vest + skirt_num*prices.skirt + trousers_num*prices.trousers + freight;
+
+
+      var sumall = 0;  //消费金额
+      
+      if(sport_num>=1 && shirt_num>=1 && suit_num>=1 && vest_num>=1 && t_shirt_num>=1 && (trousers_num>=1 || skirt_num>=1)){
+        sumall = sport_num*prices.sport + shirt_num*prices.shirt + t_shirt_num*prices.t_shirt + suit_num*prices.suit + vest_num*prices.vest + skirt_num*prices.skirt + trousers_num*prices.trousers + freight;
+
+      }
+      //不购买全套则 腰带 领带分别 计算费用 
+      else{
+        sumall = sport_num*prices.sport + shirt_num*prices.shirt + t_shirt_num*prices.t_shirt + suit_num*prices.suit + vest_num*prices.vest + skirt_num*prices.skirt + trousers_num*prices.trousers + tie_num*prices.tie + belt_num*prices.belt + freight;
+      }
+      
+			return sumall;
 		}
     function dginfoShow(){
         var dginfo = ""+$("#school").val();
@@ -317,6 +349,8 @@ Response.cachecontrol = "no-cache"
           dginfo+="&nbsp;"+($("#t_shirt").val()>0?$("#t_shirt option:selected").text():"");
           dginfo+="&nbsp;"+($("#skirt").val()>0?$("#skirt option:selected").text():"");
           dginfo+="&nbsp;"+($("#trousers").val()>0?$("#trousers option:selected").text():"");
+          dginfo+="&nbsp;"+($("#tie").val()>0?$("#tie option:selected").text():"");
+          dginfo+="&nbsp;"+($("#belt").val()>0?$("#belt option:selected").text():"");
 
           $("#dginfo").html("您的订购信息："+dginfo);
         }
@@ -331,7 +365,7 @@ Response.cachecontrol = "no-cache"
 
 		$("#submit").click(function(){
 			//检验
-			if($("#pay").text()*1<20){
+			if($("#pay").text()*1<5){
 				$.toast("请至少选择一样服装", "cancel");
 				$("#school").focus();
 				return false;
@@ -377,6 +411,8 @@ Response.cachecontrol = "no-cache"
 				"skirt":$("#skirt").val(),
 				"trousers":$("#trousers").val(),
 				"t_shirt":$("#t_shirt").val(),
+        "tie":$("#tie").val(),
+        "belt":$("#belt").val(),
 				"money":$("#pay").text(),
 				"username":$("#username").val(),
 				"mobile":$("#mobile").val(),
