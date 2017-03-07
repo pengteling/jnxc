@@ -1,11 +1,10 @@
-.mb{
-	width:1100px;
+.main{
+	width:1000px;
 	margin:0 auto;
 	position: relative;
 }
 a{
-	text-decoration:none;
-	color:#0cd6c8;
+	text-decoration:none;	
 }
 .fl{
 	float:left;
@@ -47,4 +46,14 @@ ul,li,ol{
 	50% {opacity:0.3;}
 	75%{opacity:0.65}
 	100%{ opacity:1} 
+}
+
+
+.clearfix:before,.clearfix:after{ 
+	    content:""; 
+	    display:table; 
+} 
+.clearfix:after{clear:both;} 
+.clearfix{ 
+    *zoom:1;/*IE/7/6*/
 }
