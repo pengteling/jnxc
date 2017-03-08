@@ -158,6 +158,7 @@ $blue:#0b62a9;
 	word-spacing:14px;
 }
 .mask{
+	display:none;
 	position:fixed;
 	left:0;
 	top: 0;
@@ -167,6 +168,7 @@ $blue:#0b62a9;
 	z-index:1;
 }
 .wrong-box{
+	display:none;
 	position:fixed;
 	left:50%;
 	top:50%;
@@ -234,5 +236,132 @@ $blue:#0b62a9;
 			margin:0;
 		}
 	}
+	.bottom{
+		position:absolute;
+		height: 86px;
+		background:#ebebec;
+		width:100%;
+		left: 0;
+		bottom:0;
+		text-align: center;
+		line-height: 86px;
+		a{
+			vertical-align: middle;
+			display: inline-block;
+			width:330px;
+			height: 50px;
+			background:#0b62a9;
+			border-radius: 3px;
+			line-height: 50px;
 
+		}
+
+	}
+
+}
+.desctime-box{	
+	display:none;
+	position: fixed;
+	z-index: 3;
+	width:629px;
+	height: 360px;
+	left: 50%;
+	top: 50%;
+	margin-left: -315px;
+	margin-top: -180px;
+	background:url(../images/bg-desc-time.png);
+	span{
+		display: inline-block;
+		position:absolute;
+		bottom:28px;
+		width:42px;
+		height: 54px;
+		background:url(../images/numbers.png) no-repeat;
+		&.m{
+			right: 164px;			
+		}
+		&.s{
+			right:120px;
+		}
+		&.n0{
+			background-position: -195px -59px;
+		}
+		&.n1{
+			background-position: 0 0;
+		}
+		&.n2{
+			background-position: -49px 0;
+		}
+		&.n3{
+			background-position: -98px 0;
+		}
+		&.n4{
+			background-position: -147px 0;
+		}
+		&.n5{
+			background-position: -195px 0;
+		}
+		
+		&.n6{
+			background-position: 0px -59px;
+		}
+		&.n7{
+			background-position: -49px -59px;
+		}
+		&.n8{
+			background-position: -98px -59px;
+		}
+		&.n9{
+			background-position: -147px -59px;
+		}
+
+	}
+	
+}
+.dmain{
+	height:728px;
+	.main{
+		height: 728px;
+	}
+	background:url(../images/bg-down-page.jpg) top center no-repeat;
+	.down-btns{
+		position:absolute;
+		width:100%;
+		height: 50px;
+		top: 50%;
+		margin-top: -25px;
+		left: 0;
+		a{
+			display: inline-block;
+			width:200px;
+			height: 50px;
+			background:#626262;
+			line-height: 50px;
+			font-size: 16px;
+			text-align: center;
+			margin:0 57px;			
+			&:hover{
+				background:$blue;
+			}
+		}
+	}
+	.down-links{
+		position:absolute;
+		width:478px;
+		height: 138px;
+		padding-top: 40px;
+		top: 50%;
+		left: 50%;
+		margin-left: -239px;
+		margin-top: -89px;
+		background:#fff;
+		border-radius:3px;
+		text-align: center;
+		line-height: 50px;
+		font-size: 18px;
+		word-spacing: 20px;
+		a{
+			color: $blue;
+		}
+	}
 }

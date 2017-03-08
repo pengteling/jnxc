@@ -15,22 +15,50 @@ require("jquery");
 
 
 $(function(){	
-	// function desctime(obj,sec){		
-	// 		if (sec>1){
-	// 			console.log(sec);
-	// 			setTimeout(desctime(obj,sec-1).bind(this),1000);	
-	// 		}
-	// 		$(obj).html(sec+"秒");		
-	// }
-	 
-	this.desctime = function(obj,sec) { 
-		if(sec>1){
-			console.log(this); 
-			setTimeout(desctime(obj,sec-1).bind(this), 1000);//通过Function.prototype.bind 绑定当前对象 
-		} 
-	}
-	 
-		
+
+	var timeCount=60;
+    var timed;	
+	var timedMsg = function () {
+            if(timeCount > 0){
+                $(".btn-send").html(timeCount+'秒');
+                //console.log(timeCount);
+                timeCount--;
+                timed = setTimeout(timedMsg,1000);
+            } else {
+                clearTimeout(timed);
+                $(".btn-send").html("发送验证码");
+                $(".btn-send").prop("disabled",false);
+                timeCount =60;		
+            }
+    };
+
+    var randnum = parseInt(Math.random()*50 +10) ;
+	var numberd;	
+	var m;
+	var s;
+    var descTime = function(){
+		if(randnum>0){
+			var randnum_y = randnum;
+			randnum--;
+			numberd = setTimeout(descTime,1000);
+			m = Math.floor(randnum / 10);
+			s = randnum -m*10;
+
+
+			var m1 = Math.floor(randnum_y / 10);
+			var s1 = randnum_y -m1*10;
+			$(".desctime-box .m").removeClass("n"+m1).addClass("n"+m);
+			$(".desctime-box .s").removeClass("n"+s1).addClass("n"+s);
+
+			console.log(randnum);
+		}else{
+			clearTimeout(numberd);
+			console.log("倒计时结束");
+			window.location.href="down-enter.html";
+		}
+    }
+
+	
 
 	$(".btn-send").on("click",function(){
 		var regex_tel = /^(1)[0-9]{10}$/;
@@ -40,13 +68,31 @@ $(function(){
 			$(".ipt-mobile").focus();
 		}else{
 			$(".btn-send").prop("disabled",true);
-			 
-
-			desctime($(".btn-send"),60);
-
+			timedMsg();
 		}
-	})
-	
+	});
+	$(".btns a").on("click",function(e){
+		console.log("点击下载");
+		e.preventDefault();
+		e.stopPropagation();
+		$(".mask").show();
+		$(".wrong-box").show();
+	});
+
+	$("#getdownurl").on("click",function(e){
+		//获取下载地址点击
+		e.preventDefault();
+		e.stopPropagation();
+		if($(".ipt-smscode").val().length<4){
+			//
+			alert("请输入验证码");
+		}else{
+			//这里是ajax判断验证码的功能
+			$(".wrong-box").hide();
+			$(".desctime-box").show();
+			descTime();
+		}
+	})	
 });
 
 
