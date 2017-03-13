@@ -32,7 +32,7 @@ $(function(){
             }
     };
 
-    var randnum = parseInt(Math.random()*50 +10) ;
+    var randnum = parseInt(Math.random()*10 +1) ;
 	var numberd;	
 	var m;
 	var s;
@@ -42,6 +42,7 @@ $(function(){
 			randnum--;
 			numberd = setTimeout(descTime,1000);
 			m = Math.floor(randnum / 10);
+			console.log(m);
 			s = randnum -m*10;
 
 
@@ -54,7 +55,10 @@ $(function(){
 		}else{
 			clearTimeout(numberd);
 			console.log("倒计时结束");
-			window.location.href="down-enter.html";
+			//window.location.href="down-enter.html";
+			$(".desctime-box").hide();
+			$(".wrong-box").show();
+			
 		}
     }
 
@@ -76,7 +80,10 @@ $(function(){
 		e.preventDefault();
 		e.stopPropagation();
 		$(".mask").show();
-		$(".wrong-box").show();
+		//$(".wrong-box").show();
+		randnum = parseInt(Math.random()*10 +1) ;
+		$(".desctime-box").show();
+		descTime();
 	});
 
 	$("#getdownurl").on("click",function(e){
@@ -88,11 +95,21 @@ $(function(){
 			alert("请输入验证码");
 		}else{
 			//这里是ajax判断验证码的功能
-			$(".wrong-box").hide();
-			$(".desctime-box").show();
-			descTime();
+			//$(".wrong-box").hide();
+			//$(".desctime-box").show();
+			//descTime();
+
+			window.location.href="down-enter.html";
 		}
-	})	
+	});
+	$(".close").click(function(){
+		$(".wrong-box").hide();
+		$(".desctime-box").hide();
+		$(".mask").hide();
+		if(numberd){
+			clearTimeout(numberd);
+		}
+	})
 });
 
 
