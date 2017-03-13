@@ -16,21 +16,21 @@ require("jquery");
 
 $(function(){	
 
-	var timeCount=60;
-    var timed;	
-	var timedMsg = function () {
-            if(timeCount > 0){
-                $(".btn-send").html(timeCount+'秒');
-                //console.log(timeCount);
-                timeCount--;
-                timed = setTimeout(timedMsg,1000);
-            } else {
-                clearTimeout(timed);
-                $(".btn-send").html("发送验证码");
-                $(".btn-send").prop("disabled",false);
-                timeCount =60;		
-            }
-    };
+	// var timeCount=60;
+ //    var timed;	
+	// var timedMsg = function () {
+ //            if(timeCount > 0){
+ //                $(".btn-send").html(timeCount+'秒');
+ //                //console.log(timeCount);
+ //                timeCount--;
+ //                timed = setTimeout(timedMsg,1000);
+ //            } else {
+ //                clearTimeout(timed);
+ //                $(".btn-send").html("发送验证码");
+ //                $(".btn-send").prop("disabled",false);
+ //                timeCount =60;		
+ //            }
+ //    };
 
     var randnum = parseInt(Math.random()*50 +10) ;
 	var numberd;	
@@ -58,6 +58,19 @@ $(function(){
 		}
     }
 
+    function timedMsg(obj,sec){
+    	if(sec>0){
+    		sec--;
+    		$(".btn-send").html(sec+"s");
+    		setTimeout(function(){
+    			timedMsg(obj,sec);				
+			},1000);
+    	}else{
+    		$(".btn-send").html("发送验证码");
+    	}
+		
+    }
+
 	
 
 	$(".btn-send").on("click",function(){
@@ -68,7 +81,8 @@ $(function(){
 			$(".ipt-mobile").focus();
 		}else{
 			$(".btn-send").prop("disabled",true);
-			timedMsg();
+			timedMsg($(".btn-send"),10);
+
 		}
 	});
 	$(".btns a").on("click",function(e){
