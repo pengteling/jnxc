@@ -36,7 +36,7 @@ RANDOMIZE
 		Easp.Var("OrderNum") ="HC"&iddata
 
 if request.form("username")<>"" then
- result = Easp.Db.Ins("orderlist", "OrderNum:{OrderNum}, school:{post.school}, sex:{post.sex},typeno:{post.typeno},username:{post.username},mobile:{post.mobile},addr:{post.addr},freight:{post.freight},money:{post.money},sport:{post.sport},shirt:{post.shirt},t_shirt:{post.t_shirt},vest:{post.vest},suit:{post.suit},skirt:{post.skirt},trousers:{post.trousers}")
+ result = Easp.Db.Ins("orderlist", "OrderNum:{OrderNum}, school:{post.school}, sex:{post.sex},typeno:{post.typeno},username:{post.username},mobile:{post.mobile},addr:{post.addr},freight:{post.freight},money:{post.money},sport:{post.sport},shirt:{post.shirt},t_shirt:{post.t_shirt},vest:{post.vest},suit:{post.suit},skirt:{post.skirt},trousers:{post.trousers},tie:{post.tie},belt:{post.belt}")
  if result=1 then
 response.write "1"
  else
