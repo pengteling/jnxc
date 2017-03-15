@@ -8,8 +8,10 @@ Response.cachecontrol = "no-cache"
 	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="renderer" content="webkit">		
-  	<meta name="apple-mobile-web-app-capable" content="no">
-  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-capable" content="no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="keywords" content="重庆校服,巴蜀校服,校服,新闻1+1致青春,校服英伦风,巴蜀中学校服,校服制作,校园精灵,重庆青于蓝,重庆青于蓝服饰有限公司" />
+  <meta name="description" content="2014年3月，重庆巴蜀中学的校服得到全国关注。这款校服由家长代表、学生代表及老师组成的评议团，采取公开对外招投标，各个厂家来进行展示，进行公开投票采纳的。最终，各方确定了一套融入了学校特色文化的英伦式校服和一套运动服：男生穿白边翻领黑色小西装，内配灰白衬衣加紫色斜条纹领带；女生着白色桃尖背心，外加格子齐膝短裙。青春、时尚、靓丽的设计，备受学生青睐。这里是重庆巴蜀中学校服在线零售平台,校服厂家联络人：殷海霞 15320890416" />
 	<title>巴蜀中学校服-在线零售-校园精灵</title>
 	<!-- head 中 -->
 	<!-- 校园精灵-校服零售在线订购 -->
@@ -217,6 +219,7 @@ Response.cachecontrol = "no-cache"
 <!-- <div id="dginfo"></div> -->
 <div  class="weui_cells_title">
 <a href="javascript:;" class="weui_btn weui_btn_primary" id="submit">确定</a>
+<a href="./news.asp" class="weui_btn weui_btn_primary">了解我们的校服</a>
 </div>
 
 
@@ -254,6 +257,7 @@ Response.cachecontrol = "no-cache"
     <p class="weui_btn_area">
       <a href="./index.asp" class="weui_btn weui_btn_primary">继续订购</a>
       <!-- <a href="javascript:;" class="weui_btn weui_btn_default"></a> -->
+      <a href="./news.asp" class="weui_btn weui_btn_primary">了解我们的校服</a>
     </p>
   </div> 
   
