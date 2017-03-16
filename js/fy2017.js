@@ -14,27 +14,6 @@ require("jquery");
 
 
 
-$(function(){	
-	$(".im2 li").hover(function(){
-		$(this).find(".layer").fadeIn();
-	},function(){
-		$(this).find(".layer").fadeOut();
-	});
-	$(".im8 li").hover(function(){
-		$(this).find(".front").fadeIn();
-		$(this).find(".back").hide();
-	},function(){
-		$(this).find(".front").fadeOut();
-		$(this).find(".back").show();
-	});
-	$(".im12 li").hover(function(){
-		$(this).find("span").fadeIn();
-	},function(){
-		$(this).find("span").fadeOut();
-	});
-	
-    
-});
 
 
 
