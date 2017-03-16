@@ -36,7 +36,10 @@ Response.cachecontrol = "no-cache"
 </style>
 </head>
 <body>
-<div class="logo"></div>
+
+<div class="logo"><div id='wx_pic' style='margin:0 auto;display:none;'>
+    <img src='images/weixin-1.jpg' />
+</div></div>
 
 <div class="weui_cells weui_cells_form">
 
