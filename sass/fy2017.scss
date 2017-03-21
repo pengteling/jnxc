@@ -551,7 +551,7 @@ body{
 		li{
 			&:hover{
 				top: -8px;
-				transition: all 0.3s;
+				transition: all 0.5s;
 			}
 			position:relative;
 			float: left;
@@ -781,16 +781,20 @@ body{
 			height: 124px;
 			float: left;
 			margin: 0 40px 40px 0;
+			perspective: 1000px;			
+			transform-origin: 50% 50%;
+			transform-style: preserve-3d;
+			transition: all 0.3s;
 			img{
 				display: block;
 			}
-			&:hover{
-				.back{
-					display: block;
-				}
+			&:hover{				
+				transform:translateX(1px) rotateY(180deg) ;				
 			}
 			.back{
-				display: none;
+
+				/* display: none; */
+				transform: rotateY(180deg) translateZ(1px);
 				position:absolute;
 				box-sizing:border-box;
 				left:0;
