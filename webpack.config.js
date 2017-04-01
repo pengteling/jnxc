@@ -37,8 +37,8 @@ module.exports = {
     },
     output: {
         path: './fy2017/',
-        publicPath: '/fy2017/', //调试时
-        //publicPath: './../', //发布时
+        //publicPath: '/fy2017/', //调试时
+        publicPath: './../', //发布时
         filename: './js/[name].js'
     },
 
@@ -105,10 +105,10 @@ module.exports = {
         new ExtractTextPlugin("./css/[name].css", {
             allChunks: true
         }),
-        new HtmlWebpackPlugin({ // Also generate a test.html
-            filename: 'fy2017.html',
-            template: 'fy2017.html'
-        }),
+        // new HtmlWebpackPlugin({ // Also generate a test.html
+        //     filename: 'fy2017.html',
+        //     template: 'fy2017.html'
+        // }),
         //jquery插件 
         // new webpack.ProvidePlugin({
         //     // "jQuery": path.resolve(
