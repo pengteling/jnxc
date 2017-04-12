@@ -87,9 +87,15 @@ header{
 		width:2rem;
 		height: 0.5rem;
 	}
+	margin-bottom: 1.02rem;
 }
 footer{
-
+	border-top:#eee 0.01rem solid;
+	position:fixed;
+	width:100%;
+	bottom:0;
+	left:0;
+	background:#fff;
 	nav{
 		
 		display: flex;
@@ -104,7 +110,8 @@ footer{
 						position:absolute;
 						content: "";		
 						width:0.56rem;
-						height: 0.4rem;		
+						height: 0.4rem;	
+						left: 50%;	
 						margin-left: -0.28rem;
 						top: 0.2rem;
 						background:url(../images/ico-nav-#{$i}.png) ;
