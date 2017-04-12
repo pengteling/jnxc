@@ -6,7 +6,7 @@ if (process.env.NODE_ENV !== 'production') { //开发环境下 raw-loader  html�
 ;
 require("./../sass/fy2017.scss");
 
-// require("jquery");
+require("jquery");
 // require("./superslide/jquery.SuperSlide.2.1.2.js");
 // // require("./smoothscroll/jquery.smooth-scroll.js")
 // require("./pJqueryAppearAnimateCSS3/jac.js"); //动画
@@ -17,9 +17,17 @@ require("./../sass/fy2017.scss");
 
 
 
-// $(function(){
-	
-	
+$(function() {
+	function resize() {
+	    var pr = ($(window).width()) / 750;
+	    $("html").css("font-size", 625 * pr + "%");	    
+	}
+	resize();
+	$(window).load(function() {
+	    resize();
+	})
+	$(window).resize(function() {
+	    resize();
+	});
 
-// })
-
+});

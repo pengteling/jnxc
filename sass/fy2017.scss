@@ -2,305 +2,140 @@
 /*  gem install compass-normalize  */
 @import "normalize","mixin","comm";
 @include normalize();
-$green:#04c4b7;
-html,body{
-	height:100%;
-}
-body{
-	@extend .yahei;	
-	overflow-x: hidden;
-	font-size:14px;
-}
 
-.big-btn{
-	border:$green 1px solid;
-	width:178px;
-	height:42px;
-	line-height:42px;
-	text-align:center;
-	border-radius:10px;
-	font-size:18px;
-	a{
-		color:$green;
-	}
-}
-.header{
-	height:100px;
-	line-height:100px;
+header{
+	height:0.99rem;
+	border:#d2d2d2 0.01rem solid;
 	.logo{
-		float: left;
-		width:175px;
-		height: 66px;
-		background:url(../images/logo.png);
+		width:1.75rem;
+		height: 0.66rem;
+		background: url(../images/logo.png) no-repeat;
+		background-size:100% 100%;
 		position: relative;
-		margin-left: 0;
-		margin-top: 17px;
+		left: 0.24rem;
+		top: 0.16rem;
 		a{
 			@extend .block;
-		}
-	}
-	ul{
-		float: left;
-		margin-left: 50px;
-		li{
-			font-size: 18px;
-			float: left;
-			
-			a{
-				color: #1e1f1f;
-				@extend .block;
-				padding:0 33px;
-			}
-			&.select,&:hover{
-				a{
-					color: $green;
-				}
-			}
-
 		}
 	}
 	.tel{
-		float: right;
-		text-align: right;
-		font-size: 24px;
-		background:url(../images/heade_icon_iphone.png) 0 40px no-repeat;
+		width:3.05rem;
+		height: 0.32rem;
+		background:url(../images/head-tel.png) no-repeat;
+		background-size:100% 100%;
+		position:absolute;
+		right:0.21rem;
+		top: 0.45rem;
 		a{
-			color: #a9a9a9;
+			@extend .block;
 		}
-		padding-left: 32px;
-
 	}
 }
 .banner{
-	height:640px;
-	background:url(../images/banner.jpg) top center no-repeat;
+	height:3.32rem;
+	background:url(../images/banner.jpg) no-repeat;
+	background-size:100% 100%;
+}
+.sec2{
+	position:relative;
+	height:4.04rem;
+	background:url(../images/sec2.jpg) no-repeat;
+	background-size:100% 100%;
 	.btn{
-		@include abscenter(184px,44px,442px);
+		position:absolute;
+		left: 3.94rem;
+		top: 3.09rem;
+		width:1.56rem;
+		height: 0.38rem;
 	}
 }
-.im1{
-	height:1018px;
-	background:#f6f6f6;
-	.tit{
-		@include abscenter(1000px,380px,0px,"../images/im1-tit.png");
-	}
-	ul{
-		position:absolute;
-		left: 0;
-		top: 380px;
-		width:1200px;
-	}
-	li{
-		float: left;
-		position:relative;
-		width:237px;
-		height: 303px;
-		margin-right: 17px;
-		box-shadow:1px 0 7px #c9c7cb;
-		text-align: center;
-		img{
-			display: block;
-			margin:30px auto 28px;
-		}
-		a{
-			@extend .block;
-
-
-			h3{color:#282727}
-			p{				
-				padding: 14px 30px;
-				color:#777575;
-				line-height: 18px;
-			}
-		}
-		&:hover{
-			background:$green;
-			a{
-				h3,p{color:#fff}
-			}
-		}
-		i{
-			position:absolute;
-			right:-30px;
-			top: 116px;
-			width:50px;
-			height: 50px;
-			background:url(../images/arrow-right.png);
-			z-index: 111;
-		}
-	}
-	.intro{
-		@include abscenter(654px,84px,738px);
-		line-height: 36px;
-		color:#282727;
-		span{
-			color:$green;
-		}
-		font-size: 24px;
-		text-align: center;
-	}
+.sec3{
+	position:relative;
+	height:5.57rem;
+	background:url(../images/sec3.png) no-repeat;
+	background-size:100% 100%;
+	
+}
+.sec4{
+	position:relative;
+	height:7.49rem;
+	background:url(../images/sec4.png) no-repeat;
+	background-size:100% 100%;
 	.btn{
-		@include abscenter(180px,44px,854px);
-		@extend .big-btn;
+		position:absolute;
+		left: 2.71rem;
+		top: 6.25rem;
+		width:2rem;
+		height: 0.5rem;
+	}
+}
+.sec5{
+	position:relative;
+	height:4.16rem;
+	background:url(../images/sec5.png) no-repeat;
+	background-size:100% 100%;	
+}
+.sec6{
+	position:relative;
+	height:10.4rem;
+	background:url(../images/sec6.png) no-repeat;
+	background-size:100% 100%;	
+	.btn{
+		position:absolute;
+		left: 2.71rem;
+		top: 9.25rem;
+		width:2rem;
+		height: 0.5rem;
+	}
+}
+footer{
 
+	nav{
 		
-	}
-}
-.im2{
-	height:772px;
-	.tit{
-		@include abscenter(1000px,309px,0px,"../images/im2-tit.png");
-	}
-	ul{
-		position:absolute;
-		left: 0;
-		top: 309px;
-		width:1200px;
-	}
-	li{
-		width:454px;
-		height: 138px;
-		float: left;
-		padding-left: 114px;
-		$i:1;
-		@while($i<5){
-			
-			&.li-#{$i}{
-				background:url(../images/img02_icon_0#{$i}.png) no-repeat;
+		display: flex;
+		align-items:center;
+		a{
+			$i:1;
+			@while($i<=3){
+				&.nav-#{$i}{
+					position:relative;
+					color:#979696;
+					&::before{
+						position:absolute;
+						content: "";		
+						width:0.56rem;
+						height: 0.4rem;		
+						margin-left: -0.28rem;
+						top: 0.2rem;
+						background:url(../images/ico-nav-#{$i}.png) ;
+						background-size:100% 100%;
+					}
+					&.select,&:hover{
+						color:#04c4b7;
+							&::before{
+							position:absolute;
+							content: "";		
+							width:0.56rem;
+							height: 0.4rem;		
+							margin-left: -0.28rem;
+							top: 0.2rem;
+							background:url(../images/ico-nav-#{$i}-h.png) ;
+							background-size:100% 100%;
+						}
+					}					
+				}
+				$i:$i+1;
 			}
-			$i:$i+1;
-		}
-		p{
-			width:314px;
-			line-height: 18px;
-			color:#777575;
-			margin-top: 5px;
-		}
-		h2{
-			color:#282727;
-			line-height: 36px;
-			font-weight: bolder;
-		}
-
-	}
-	.btn{
-		@include abscenter(180px,44px,609px);
-		@extend .big-btn;		
-	}
-}
-.im3{
-	height:1018px;
-	background:$green;
-	.im3-main{
-		@include abscenter(1000px,783px,0px,"../images/im3-main.png");
-	}
-	.btn{
-		@include abscenter(180px,44px,852px);
-		@extend .big-btn;	
-		a{
-			color:#fff;
-
-		}	
-		border-color:#fff;
-	}
-}
-.im4{
-	height:977px;	
-	.im4-main{
-		@include abscenter(1920px,810px,0px,"../images/im4-main.png");
-	}
-	.btn{
-		@include abscenter(180px,44px,810px);
-		@extend .big-btn;			
-	}
-}
-.im5{
-	height:1226px;
-	background:#f6f6f6;	
-	.im5-main{
-		@include abscenter(1920px,1062px,0px,"../images/im5-main.png");
-	}
-	.btn{
-		@include abscenter(180px,44px,1062px);
-		@extend .big-btn;			
-	}
-}
-.im6{
-	height:940px;
-	background:$green;
-	.im6-main{
-		@include abscenter(1920px,714px,0px,"../images/im6-main.png");
-	}
-	.btn{
-		@include abscenter(180px,44px,776px);
-		@extend .big-btn;	
-		a{
-			color:#fff;
-
-		}	
-		border-color:#fff;
-	}
-}
-.im7{
-	height:1002px;
-	.im7-main{
-		@include abscenter(1920px,838px,0px,"../images/im7-main.png");
-	}
-	.btn{
-		@include abscenter(180px,44px,838px);
-		@extend .big-btn;			
-	}
-}
-.im8{
-	height:723px;
-	background:url(../images/im8-main.png) top center no-repeat;
-	.item{
-		width:466px;
-		height: 166px;
-		position:absolute;
-		a{
-			@extend .block;
-		}
-	}
-	.left{
-		left:0;
-		top: 358px;
-	}
-	.right{
-		right:0;
-		top: 358px;
-	}
-}
-
-.footer{
-	height:385px;
-	background:url(../images/foot.png) top center no-repeat;
-	.btns{
-		@include abscenter(440px,42px,154px);
-		.btn{
-			width:180px;
-			height: 40px;
-			border:#fff 1px solid;
+			height:0.36rem;
+			padding-top: 0.66rem;
 			text-align: center;
-			line-height: 40px;
-			font-size: 18px;
-			border-radius: 40px;
-			a{
-				color: #fff;
-			}
-			&:hover{
+			display: block;
+			font-size: 0.2rem;
+			flex:1;			
 			
-				background:$green;
-				border:$green 1px solid;
-				
+			h3{
+				font-weight: normal;
 			}
 		}
-		.btn-1{
-			float: left;
-		}
-		.btn-2{
-			float: right;
-		}
-
 	}
 }

@@ -37,8 +37,8 @@ module.exports = {
     },
     output: {
         path: './fy2017/',
-        //publicPath: '/fy2017/', //调试时
-        publicPath: './../', //发布时
+        publicPath: '/fy2017/', //调试时
+        //publicPath: './../', //发布时
         filename: './js/[name].js'
     },
 
