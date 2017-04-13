@@ -3,146 +3,89 @@
 @import "normalize","mixin","comm";
 @include normalize();
 
-header{
-	height:0.99rem;
-	border:#d2d2d2 0.01rem solid;
-	.logo{
-		width:1.75rem;
-		height: 0.66rem;
-		background: url(../images/logo.png) no-repeat;
-		background-size:100% 100%;
-		position: relative;
-		left: 0.24rem;
-		top: 0.16rem;
-		a{
-			@extend .block;
-		}
+.im1{
+	background:url(../images/im1.jpg) top center no-repeat;
+	height: 500px;
+	.ipt-txt{
+		position: absolute;
+		width:260px;
+		height: 56px;
+		color:#a5a4a4;
+		font-size: 18px;
+		outline: none;
+	}
+	.uname{
+		right:20px;
+		top: 118px;
 	}
 	.tel{
-		width:3.05rem;
-		height: 0.32rem;
-		background:url(../images/head-tel.png) no-repeat;
-		background-size:100% 100%;
+		right:20px;
+		top: 211px;
+	}
+	.submit{
 		position:absolute;
-		right:0.21rem;
-		top: 0.45rem;
-		a{
-			@extend .block;
-		}
+		display: block;
+		width:300px;
+		height: 57px;
+		top: 320px;
+		right: 0;
 	}
 }
-.banner{
-	height:3.32rem;
-	background:url(../images/banner.jpg) no-repeat;
-	background-size:100% 100%;
+.im2{
+	background:url(../images/im2.jpg) top center no-repeat;
+	height: 724px;
 }
-.sec2{
-	position:relative;
-	height:4.04rem;
-	background:url(../images/sec2.jpg) no-repeat;
-	background-size:100% 100%;
-	.btn{
-		position:absolute;
-		left: 3.94rem;
-		top: 3.09rem;
-		width:1.56rem;
-		height: 0.38rem;
-	}
+.im3{
+	background:url(../images/im3.png) top center no-repeat;
+	height: 186px;
 }
-.sec3{
-	position:relative;
-	height:5.57rem;
-	background:url(../images/sec3.png) no-repeat;
-	background-size:100% 100%;
-	
+.im4{
+	background:url(../images/im4.jpg) top center no-repeat;
+	height: 1012px;
 }
-.sec4{
-	position:relative;
-	height:7.49rem;
-	background:url(../images/sec4.png) no-repeat;
-	background-size:100% 100%;
-	.btn{
-		position:absolute;
-		left: 2.71rem;
-		top: 6.25rem;
-		width:2rem;
-		height: 0.5rem;
-	}
+.im5{
+	background:url(../images/im5.jpg) top center no-repeat;
+	height: 676px;
 }
-.sec5{
-	position:relative;
-	height:4.16rem;
-	background:url(../images/sec5.png) no-repeat;
-	background-size:100% 100%;	
-}
-.sec6{
-	position:relative;
-	height:10.4rem;
-	background:url(../images/sec6.png) no-repeat;
-	background-size:100% 100%;	
-	.btn{
-		position:absolute;
-		left: 2.71rem;
-		top: 9.25rem;
-		width:2rem;
-		height: 0.5rem;
-	}
-	margin-bottom: 1.02rem;
-}
-footer{
-	border-top:#eee 0.01rem solid;
-	position:fixed;
-	width:100%;
-	bottom:0;
-	left:0;
-	background:#fff;
-	nav{
-		
-		display: flex;
-		align-items:center;
-		a{
-			$i:1;
-			@while($i<=3){
-				&.nav-#{$i}{
-					position:relative;
-					color:#979696;
-					&::before{
-						position:absolute;
-						content: "";		
-						width:0.56rem;
-						height: 0.4rem;	
-						left: 50%;	
-						margin-left: -0.28rem;
-						top: 0.2rem;
-						background:url(../images/ico-nav-#{$i}.png) ;
-						background-size:100% 100%;
-					}
-					&.select,&:hover{
-						color:#04c4b7;
-							&::before{
-							position:absolute;
-							content: "";		
-							width:0.56rem;
-							height: 0.4rem;		
-							margin-left: -0.28rem;
-							top: 0.2rem;
-							background:url(../images/ico-nav-#{$i}-h.png) ;
-							background-size:100% 100%;
-						}
-					}					
-				}
-				$i:$i+1;
-			}
-			height:0.36rem;
-			padding-top: 0.66rem;
-			text-align: center;
-			display: block;
-			font-size: 0.2rem;
-			flex:1;			
-			
-			h3{
-				font-weight: normal;
+.im6{
+	background:url(../images/im6.png) top center no-repeat;
+	height: 867px;
+	ul{
+		@include abscenter(1200px,520px,280px);
+		li{
+			width:50%;
+			height: 80px;
+			margin-bottom: 20px;
+			float: left;
+			a{
+				@extend .block
 			}
 		}
 	}
+}
+.im7{
+	background:url(../images/im7.png) top center no-repeat;
+	height: 922px;
+}
+.im8{
+	background:url(../images/im8.png) top center no-repeat;
+	height: 910px;
+}
+.im9{
+	background:url(../images/im9.png) top center no-repeat;
+	height: 961px;
+	.btn{
+		@include abscenter(180px,40px,820px);
+	}
+}
+.im10{
+	background:url(../images/im10.jpg) top center no-repeat;
+	height: 653px;
+	.btn{
+		@include abscenter(1000px,306px,246px);
+	}
+}
+.im11{
+	background:url(../images/im11.jpg) top center no-repeat;
+	height: 1025px;
 }
