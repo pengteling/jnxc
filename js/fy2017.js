@@ -17,17 +17,17 @@ require("jquery");
 
 
 
-$(function() {
-	function resize() {
-	    var pr = ($(window).width()) / 750;
-	    $("html").css("font-size", 625 * pr + "%");	    
-	}
-	resize();
-	$(window).load(function() {
-	    resize();
-	})
-	$(window).resize(function() {
-	    resize();
-	});
+// $(function() {
+// 	function resize() {
+// 	    var pr = ($(window).width()) / 750;
+// 	    $("html").css("font-size", 625 * pr + "%");	    
+// 	}
+// 	resize();
+// 	$(window).load(function() {
+// 	    resize();
+// 	})
+// 	$(window).resize(function() {
+// 	    resize();
+// 	});
 
-});
+// });

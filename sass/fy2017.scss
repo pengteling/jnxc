@@ -33,59 +33,92 @@
 }
 .im2{
 	background:url(../images/im2.jpg) top center no-repeat;
-	height: 724px;
+	height: 561px;
 }
 .im3{
 	background:url(../images/im3.png) top center no-repeat;
-	height: 186px;
+	height: 604px;
 }
 .im4{
-	background:url(../images/im4.jpg) top center no-repeat;
-	height: 1012px;
+	background:url(../images/im4.png) top center no-repeat;
+	height: 1151px;
 }
 .im5{
-	background:url(../images/im5.jpg) top center no-repeat;
-	height: 676px;
-}
-.im6{
-	background:url(../images/im6.png) top center no-repeat;
-	height: 867px;
+	background:url(../images/im5.png) top center no-repeat;
+	height: 715px;
 	ul{
-		@include abscenter(1200px,520px,280px);
+		position:absolute;
+		width:1200px;
+		left: 0;
+		top: 241px;
 		li{
-			width:50%;
-			height: 80px;
-			margin-bottom: 20px;
+			width:170px;
+			height: 165px;
+			margin-top: 40px;
+			margin-right: 80px;
 			float: left;
+
 			a{
-				@extend .block
+				@extend .block;
+				color:#fff;
+			}
+			.icon{
+				width:37px;
+				height: 46px;
+				border-radius: 50%;
+				background:#e5e5e5;
+				
+				line-height: 46px;
+				margin: 0 auto;
+				font-size: 30px;
+				font-style: italic;
+				padding-left: 9px
+			}
+			.tit{
+				font-size: 18px;
+				color: #2d2d2d;
+				line-height: 24px;
+				margin: 20px auto;
+			}
+			.btn{
+				width:90px;
+				height: 26px;
+				border:#15c7cb 1px solid;
+				text-align: center;
+				color:#15c7cb;
+				line-height: 26px;
+				border-radius:5px;
+				margin:0 auto;
+			}
+			&:hover{
+				.icon{
+					background:#15c7cb;
+				}
+				.btn{
+					color:#fff;
+					background:#15c7cb;
+				}
 			}
 		}
 	}
 }
+.im6{
+	background:url(../images/im6.png) top center no-repeat;
+	height: 917px;	
+}
 .im7{
 	background:url(../images/im7.png) top center no-repeat;
-	height: 922px;
+	height: 878px;
 }
 .im8{
 	background:url(../images/im8.png) top center no-repeat;
-	height: 910px;
+	height: 891px;
+	.btn{
+		@include abscenter(180px,40px,747px);
+	}
 }
 .im9{
 	background:url(../images/im9.png) top center no-repeat;
-	height: 961px;
-	.btn{
-		@include abscenter(180px,40px,820px);
-	}
-}
-.im10{
-	background:url(../images/im10.jpg) top center no-repeat;
-	height: 653px;
-	.btn{
-		@include abscenter(1000px,306px,246px);
-	}
-}
-.im11{
-	background:url(../images/im11.jpg) top center no-repeat;
-	height: 1025px;
+	height: 968px;
+	
 }
