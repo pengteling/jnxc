@@ -1,0 +1,131 @@
+@charset 'utf-8';
+/*  gem install compass-normalize  */
+@import "normalize","mixin","comm";
+@include normalize();
+
+/* $green:#0cd6c8;
+$purple:#7a4ffd; */
+body{	
+	max-width:750px;
+	margin:0 auto;
+	font-family: "Arial","Microsoft YaHei", "SimHei", "SimSun";		
+}
+.head{
+	position: relative;
+	height:1.08rem;
+	margin-bottom: 3.68rem;
+	background:#191e2a;
+	.logo{
+		@include abs(3.03rem,1.08rem,0rem,0rem,null,null,'../images/logo.png');
+		a{
+			@extend .block;
+		}
+	}
+	.tel{
+		@include abs(2.7rem,1.08rem,null,0,0.28rem,null,'../images/tel.png');
+		a{
+			@extend .block;
+		}
+	}
+
+}
+.banner{
+	@include abscenter(7.5rem,3.68rem,1.08rem,'../images/banner.jpg');
+}
+.main a{
+	@include abscenterb(3.4rem,0.60rem,0.9rem,null);
+		font-size: 0;
+}
+.im1{
+	position:relative;
+	margin: -0.52rem auto 0;
+	@include whb(7.1rem,10.15rem,'../images/im1.jpg');
+	/* a{
+		@include abscenter(3.4rem,0.60rem,9.03rem,null);
+		font-size: 0;
+	} */
+	a{
+		bottom: 51px;
+	}
+}
+.im2{
+	position:relative;
+	margin: 0 auto ;
+	@include whb(7.1rem,10.9rem,'../images/im2.jpg');
+}
+.im3{
+	position:relative;
+	overflow: hidden;
+	margin: 0 auto ;
+	@include whb(7.5rem,10.8rem,'../images/im3.jpg');
+	ul{
+		margin-top: 284px;
+		li{
+			float: left;
+			width: 300px;
+			height: 328px;
+			margin-bottom: 40px;
+			&:nth-child(odd){
+				margin-left: 40px;
+				margin-right: 65px;
+			}
+			a{
+				@extend .block;
+			}
+		}
+	}
+}
+.im4{
+	position:relative;
+	margin: 0 auto ;
+	@include whb(7.5rem,8.74rem,'../images/im4.jpg');
+	a{
+		bottom:0.81rem;
+	}
+}
+.im5{
+	position:relative;
+	margin: 0 auto ;
+	@include whb(7.5rem,8.57rem,'../images/im5.jpg');
+	a{
+		bottom:0.4rem;
+	}
+}
+.im6{
+	position:relative;
+	margin: 0 auto ;
+	@include whb(7.5rem,6.22rem,'../images/im6.jpg');
+	a{
+		bottom:0.6rem;
+	}
+}
+.im7{
+	position:relative;
+	margin: 0 auto ;
+	@include whb(7.5rem,8.67rem,'../images/im7.jpg');
+	a{
+		bottom:0.73rem;
+	}
+}
+.im8{
+	position:relative;
+	margin: 0 auto ;
+	@include whb(7.5rem,8.49rem,'../images/im8.jpg');
+	
+}
+.im9{
+	position:relative;
+	margin: 0 auto ;
+	@include whb(7.5rem,2.88rem,'../images/im10.jpg');
+	a{
+		float: left;
+		width: 1.8rem;
+		height: 0.60rem;
+		margin-top: 1.68rem;
+		font-size: 0;
+		&.about{
+			margin-left: 1.42rem;
+			margin-right: 0.78rem
+		}
+	}
+}

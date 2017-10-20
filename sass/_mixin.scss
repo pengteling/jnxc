@@ -10,6 +10,18 @@
 		background-size:100% 100%;
 	}
 }
+@mixin abscenterb($width,$height,$top,$url:null){
+	position:absolute;
+	width:$width;
+	height:$height;
+	left:50%;
+	margin-left: -$width/2;
+	bottom:$top;
+	@if $url{
+		background:url($url);
+		background-size:100% 100%;
+	}
+}
 @mixin whb($width,$height,$url:null){
 	width:$width;
 	height:$height;
