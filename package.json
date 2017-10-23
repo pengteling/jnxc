@@ -6,6 +6,7 @@
     "node-sass": "^4.5.2"
   },
   "scripts": {
-    "dev": "webpack-dev-server --inline-hot"
+    "dev": "webpack-dev-server --inline-hot",
+    "build":"webpack  --config ./webpack.config2.js"
   }
 }

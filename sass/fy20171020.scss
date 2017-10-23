@@ -6,9 +6,10 @@
 /* $green:#0cd6c8;
 $purple:#7a4ffd; */
 body{	
-	max-width:750px;
+	max-width:7.50rem;
 	margin:0 auto;
 	font-family: "Arial","Microsoft YaHei", "SimHei", "SimSun";		
+	background:#ffffff;
 }
 .head{
 	position: relative;
@@ -32,26 +33,57 @@ body{
 .banner{
 	@include abscenter(7.5rem,3.68rem,1.08rem,'../images/banner.jpg');
 }
-.main a{
+.main a.more{
 	@include abscenterb(3.4rem,0.60rem,0.9rem,null);
 		font-size: 0;
 }
 .im1{
 	position:relative;
 	margin: -0.52rem auto 0;
-	@include whb(7.1rem,10.15rem,'../images/im1.jpg');
+	@include whb(7.1rem,8.9rem,'../images/im1.jpg');
 	/* a{
 		@include abscenter(3.4rem,0.60rem,9.03rem,null);
 		font-size: 0;
 	} */
-	a{
-		bottom: 51px;
+	a.more{
+		bottom: .83rem;
+	}
+	ul{
+		padding-top: 1.90rem;
+		padding-left: .16rem;		
+		li{
+			position:relative;
+			float: left;
+			width: 3.20rem;
+			height: 1.50rem;
+			margin-right: .20rem;
+			margin-bottom: .20rem;
+			a{
+				@extend .block;
+			}
+		}
 	}
 }
 .im2{
 	position:relative;
 	margin: 0 auto ;
 	@include whb(7.1rem,10.9rem,'../images/im2.jpg');
+	ul{
+		padding-top: 2.33rem;
+		li{
+			height: 1.64rem;
+			a{
+				@extend .block;
+				width: 50%;
+				&.tr{
+					float: right;
+				}
+				&.tl{
+					float: left
+				}
+			}
+		}
+	}
 }
 .im3{
 	position:relative;
@@ -59,15 +91,15 @@ body{
 	margin: 0 auto ;
 	@include whb(7.5rem,10.8rem,'../images/im3.jpg');
 	ul{
-		margin-top: 284px;
+		margin-top: 2.84rem;
 		li{
 			float: left;
-			width: 300px;
-			height: 328px;
-			margin-bottom: 40px;
+			width: 3rem;
+			height: 3.28rem;
+			margin-bottom: 0.4rem;
 			&:nth-child(odd){
-				margin-left: 40px;
-				margin-right: 65px;
+				margin-left: 0.4rem;
+				margin-right: 0.65rem;
 			}
 			a{
 				@extend .block;
@@ -79,23 +111,48 @@ body{
 	position:relative;
 	margin: 0 auto ;
 	@include whb(7.5rem,8.74rem,'../images/im4.jpg');
-	a{
+	a.more{
 		bottom:0.81rem;
+	}
+	ul{
+		padding-top: 2.56rem;
+		padding-left: 0.3rem;
+		li{
+			float: left;
+			width: 3.35rem;
+			height: 2.0rem;
+			margin-right: 0.2rem;
+			a{
+				@extend .block;
+			}
+		}
 	}
 }
 .im5{
 	position:relative;
 	margin: 0 auto ;
 	@include whb(7.5rem,8.57rem,'../images/im5.jpg');
-	a{
+	a.more{
 		bottom:0.4rem;
+	}
+	ul{
+		padding:2.11rem 0 0 0.2rem;
+		li{
+			float: left;
+			width: 2.3rem;
+			height: 4.9rem;
+			margin-right: 0.12rem;
+			a{
+				@extend .block;
+			}
+		}
 	}
 }
 .im6{
 	position:relative;
 	margin: 0 auto ;
 	@include whb(7.5rem,6.22rem,'../images/im6.jpg');
-	a{
+	a.more{
 		bottom:0.6rem;
 	}
 }
@@ -103,7 +160,7 @@ body{
 	position:relative;
 	margin: 0 auto ;
 	@include whb(7.5rem,8.67rem,'../images/im7.jpg');
-	a{
+	a.more{
 		bottom:0.73rem;
 	}
 }
